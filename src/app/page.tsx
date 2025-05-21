@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowRight, BriefcaseIcon, Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -7,6 +7,7 @@ import { SkillBadge } from "./_components/skill-badge"
 import { ProjectCard } from "./_components/project-card"
 import { ContactForm } from "./_components/contact-form"
 import { ThemeToggle } from "./_components/theme-toggle"
+import { ExperienceTimeline } from "./_components/experience-timeline"
 
 export default function Home() {
   return (
@@ -32,15 +33,15 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-4">
              <ThemeToggle />
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/Hroco" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               <span className="sr-only">GitHub</span>
             </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/samuel-hrotik-071399132/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href="mailto:contact@example.com">
+            <Link href="mailto:samuel.hrotik@gmail.com">
               <Mail className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               <span className="sr-only">Email</span>
             </Link>
@@ -74,7 +75,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=500&width=500"
+                src="/HeroPhoto.jpg?height=500&width=500"
                 alt="Developer portrait"
                 fill
                 className="object-cover"
@@ -89,7 +90,7 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/About.jpg?height=400&width=600"
                   alt="Developer working"
                   fill
                   className="object-cover"
@@ -113,6 +114,16 @@ export default function Home() {
                 web technologies.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section id="experience" className="bg-muted/40 py-24 sm:py-32">
+          <div className="container mx-auto">
+            <div className="flex items-center gap-2 mb-12">
+              <BriefcaseIcon className="h-8 w-8 text-primary" />
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Work Experience</h2>
+            </div>
+            <ExperienceTimeline />
           </div>
         </section>
 
@@ -182,22 +193,23 @@ export default function Home() {
             <ProjectCard
               title="SplitWallet"
               description="A sophisticated expense-sharing application designed to help users track, manage, and split expenses within groups."
-              image="/placeholder.svg?height=400&width=600"
+              image="/Splitwallet.png?height=724&width=1290"
               tags={["Next.js", "TypeScript", "tRPC", "PostgreSQL", "Drizzle ORM", "Zustand", "Tailwind CSS"]}
+              link="https://splitwallet.nexelon.sk/"
               featured={true}
             />
             <div className="grid md:grid-cols-2 gap-8">
               <ProjectCard
-                title="E-Commerce Platform"
-                description="A modern e-commerce platform with product management, cart functionality, and payment processing."
-                image="/placeholder.svg?height=300&width=400"
-                tags={["Next.js", "React", "Stripe", "MongoDB"]}
+                title="Warehouse Assistant"
+                description="A modern warehouse management system with inventory tracking, order management, and real-time analytics."
+                image="/Warehouse.png?height=300&width=400"
+                tags={["Next.js", "React", "PostgreSQL"]}
               />
               <ProjectCard
-                title="Task Management App"
-                description="A collaborative task management application with real-time updates and team collaboration features."
-                image="/placeholder.svg?height=300&width=400"
-                tags={["React", "Firebase", "Tailwind CSS", "Redux"]}
+                title="Invoice Generator"
+                description="Invoice generator for ice cream shop with excel export."
+                image="/InvoiceGenerator.png?height=300&width=400"
+                tags={["React", "Electron", "Tailwind CSS"]}
               />
             </div>
           </div>
@@ -210,32 +222,32 @@ export default function Home() {
               <div>
                 <div className="relative h-[400px] rounded-lg overflow-hidden mb-6">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="/Splitwallet.png?height=400&width=600"
                     alt="SplitWallet application screenshot"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="relative h-[100px] rounded-lg overflow-hidden">
+                  <div className="relative h-[200px] w-[100px] rounded-lg overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/BalancesDark.jpg?height=100&width=100"
                       alt="SplitWallet UI detail"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div className="relative h-[100px] rounded-lg overflow-hidden">
+                  <div className="relative h-[200px] w-[100px] rounded-lg overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/ExpensesDark.jpg?height=100&width=100"
                       alt="SplitWallet UI detail"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div className="relative h-[100px] rounded-lg overflow-hidden">
+                  <div className="relative h-[200px] w-[100px] rounded-lg overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/HomepageDark.jpg?height=100&width=100"
                       alt="SplitWallet UI detail"
                       fill
                       className="object-cover"
@@ -313,15 +325,15 @@ export default function Home() {
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>contact@example.com</span>
+                  <span>samuel.hrotik@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Linkedin className="h-5 w-5 text-primary" />
-                  <span>linkedin.com/in/yourprofile</span>
+                  <span>https://www.linkedin.com/in/samuel-hrotik-071399132/</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Github className="h-5 w-5 text-primary" />
-                  <span>github.com/yourusername</span>
+                  <span>github.com/Hroco</span>
                 </div>
               </div>
             </div>
@@ -337,15 +349,15 @@ export default function Home() {
             </p>
           </div>
           <div className="flex gap-4">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/Hroco" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               <span className="sr-only">GitHub</span>
             </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/samuel-hrotik-071399132/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href="mailto:contact@example.com">
+            <Link href="mailto:samuel.hrotik@gmail.com">
               <Mail className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               <span className="sr-only">Email</span>
             </Link>
