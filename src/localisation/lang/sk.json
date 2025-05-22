@@ -1,0 +1,118 @@
+{
+  "navbar": {
+    "devPortfolio": "DevPortfolio",
+    "home": "Domov",
+    "about": "O mne",
+    "skills": "Zručnosti",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "buttons": {
+    "viewMyWork": "Zobraziť moju prácu",
+    "getInTouch": "Kontaktujte ma",
+    "contactMe": "Kontaktujte ma",
+    "viewProject": "Zobraziť projekt",
+    "viewDetails": "Zobraziť detaily",
+    "sendMessage": "Odoslať správu",
+    "sending": "Odosielanie..."
+  },
+  "header": {
+    "fullstackDeveloper": "Fullstack vývojár",
+    "specialization": "Špecializácia na Next.js & React",
+    "buildingModern": "Vyvíjam moderné webové a mobilné aplikácie s najnovšími technológiami"
+  },
+  "about": {
+    "title": "O mne",
+    "paragraph1": "Som zanietený fullstack vývojár so skúsenosťami vo vývoji moderných webových a mobilných aplikácií. So silným základom v Next.js, React a TypeScript vytváram škálovateľné, výkonné a používateľsky prívetivé aplikácie.",
+    "paragraph2": "Moje skúsenosti siahajú cez celý vývojový stack, od návrhu intuitívnych používateľských rozhraní až po implementáciu robustných backendových systémov a databázových architektúr. Obzvlášť sa špecializujem na vývoj komplexných aplikácií so sofistikovaným manažmentom stavu a synchronizačnými systémami.",
+    "paragraph3": "Vždy rád prijímam náročné projekty, ktoré posúvajú hranice možností moderných webových technológií."
+  },
+  "experience": {
+    "title": "Pracovné skúsenosti"
+  },
+  "skills": {
+    "title": "Technické zručnosti",
+    "frontend": "Frontend vývoj",
+    "backend": "Backend vývoj",
+    "devops": "DevOps & nástroje",
+    "other": "Ďalšie zručnosti"
+  },
+  "projects": {
+    "title": "Vybrané projekty",
+    "splitwallet": {
+      "title": "SplitWallet",
+      "description": "Sofistikovaná aplikácia na zdieľanie výdavkov, navrhnutá na pomoc používateľom sledovať, spravovať a deliť výdavky v skupinách."
+    },
+    "warehouse": {
+      "title": "Warehouse Assistant",
+      "description": "Moderný systém pre správu skladu so sledovaním zásob, riadením objednávok a analýzami v reálnom čase."
+    },
+    "invoice": {
+      "title": "Invoice Generator",
+      "description": "Generátor faktúr pre zmrzlináreň s exportom do Excelu."
+    },
+    "more": "+{count} ďalšie"
+  },
+  "caseStudy": {
+    "title": "Prípadová štúdia SplitWallet",
+    "overview": {
+      "title": "Prehľad projektu",
+      "description": "SplitWallet je sofistikovaná aplikácia na zdieľanie výdavkov, navrhnutá na pomoc používateľom sledovať, spravovať a deliť výdavky v skupinách. Aplikácia umožňuje používateľom vytvárať peňaženky (skupiny výdavkov), pridávať výdavky, sledovať zostatky, generovať správy a efektívne vyrovnávať dlhy."
+    },
+    "technical": {
+      "title": "Technické highlights",
+      "item1": "Postavené ako monorepo pomocou Next.js, tRPC, PostgreSQL a Drizzle ORM",
+      "item2": "Implementovaný sofistikovaný systém synchronizácie stavu pre offline fungovanie",
+      "item3": "Integrované skenovanie účteniek pomocou Gemini 2.5 Pro s AI",
+      "item4": "Vyvinutý inteligentný algoritmus minimalizácie dlhov s viacerými režimami úhrad",
+      "item5": "Vytvorený komplexný dizajn systém s podporou svetlého a tmavého režimu"
+    },
+    "features": {
+      "title": "Kľúčové funkcie",
+      "item1": "Správa výdavkov s vlastným rozdelením medzi používateľov",
+      "item2": "Správa skupín s viacerými peňaženkami a hierarchickou organizáciou",
+      "item3": "Aktualizácie v reálnom čase a offline podpora so synchronizáciou dát",
+      "item4": "Podpora viacerých jazykov a konverzia mien",
+      "item5": "Prémiové funkcie s integráciou predplatného cez Stripe"
+    }
+  },
+  "contact": {
+    "title": "Kontaktujte ma",
+    "description": "Som vždy otvorený diskusii o nových projektoch, kreatívnych nápadoch alebo príležitostiach byť súčasťou vašej vízie.",
+    "form": {
+      "name": "Meno",
+      "namePlaceholder": "Vaše meno",
+      "email": "Email",
+      "emailPlaceholder": "Váš email",
+      "subject": "Predmet",
+      "subjectPlaceholder": "Predmet vašej správy",
+      "message": "Správa",
+      "messagePlaceholder": "Vaša správa",
+      "sent": "Správa odoslaná!",
+      "sentDescription": "Ďakujem za vašu správu. Čoskoro sa vám ozvem."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Samuel Hrotik. Všetky práva vyhradené."
+  },
+  "theme": {
+    "toggle": "Prepnúť tému",
+    "light": "Svetlá",
+    "dark": "Tmavá",
+    "system": "Systémová"
+  },
+  "metadata": {
+    "title": "Samuel Hrotik - Fullstack Developer",
+    "description": "Samuel Hrotik je zanietený fullstack vývojár so špecializáciou na Next.js a React, ktorý vyvíja moderné webové a mobilné aplikácie s najnovšími technológiami.",
+    "keywords": [
+      "Samuel Hrotik",
+      "Fullstack Developer",
+      "Next.js",
+      "React",
+      "Vývoj Web aplikácií",
+      "Mobilné aplikácie",
+      "Softvérový inžiniering",
+      "Vývoj aplikácií"
+    ]
+  }
+}

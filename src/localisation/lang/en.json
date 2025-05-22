@@ -1,0 +1,117 @@
+{
+  "navbar": {
+    "devPortfolio": "DevPortfolio",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "viewMyWork": "View My Work",
+    "getInTouch": "Get In Touch",
+    "contactMe": "Contact Me",
+    "viewProject": "View Project",
+    "viewDetails": "View Details",
+    "sendMessage": "Send Message",
+    "sending": "Sending..."
+  },
+  "header": {
+    "fullstackDeveloper": "Fullstack Developer",
+    "specialization": "Specialized in Next.js & React",
+    "buildingModern": "Building modern web and mobile applications with cutting-edge technologies"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a passionate fullstack developer with expertise in building modern web and mobile applications. With a strong foundation in Next.js, React, and TypeScript, I create scalable, performant, and user-friendly applications.",
+    "paragraph2": "My experience spans across the entire development stack, from designing intuitive user interfaces to implementing robust backend systems and database architectures. I'm particularly skilled in building complex applications with sophisticated state management and synchronization systems.",
+    "paragraph3": "I'm always eager to take on challenging projects that push the boundaries of what's possible with modern web technologies."
+  },
+  "experience": {
+    "title": "Work Experience"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "devops": "DevOps & Tools",
+    "other": "Other Skills"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "splitwallet": {
+      "title": "SplitWallet",
+      "description": "A sophisticated expense-sharing application designed to help users track, manage, and split expenses within groups."
+    },
+    "warehouse": {
+      "title": "Warehouse Assistant",
+      "description": "A modern warehouse management system with inventory tracking, order management, and real-time analytics."
+    },
+    "invoice": {
+      "title": "Invoice Generator",
+      "description": "Invoice generator for ice cream shop with excel export."
+    },
+    "more": "+{count} more"
+  },
+  "caseStudy": {
+    "title": "SplitWallet Case Study",
+    "overview": {
+      "title": "Project Overview",
+      "description": "SplitWallet is a sophisticated expense-sharing application designed to help users track, manage, and split expenses within groups. The app allows users to create wallets (expense groups), add expenses, track balances, generate reports, and settle debts efficiently."
+    },
+    "technical": {
+      "title": "Technical Highlights",
+      "item1": "Built as a monorepo using Next.js, tRPC, PostgreSQL, and Drizzle ORM",
+      "item2": "Implemented a sophisticated state synchronization system for offline functionality",
+      "item3": "Integrated AI-powered receipt scanning using Gemini 2.5 Pro",
+      "item4": "Developed a smart debt minimization algorithm with multiple reimbursement modes",
+      "item5": "Created a comprehensive design system with light and dark mode support"
+    },
+    "features": {
+      "title": "Key Features",
+      "item1": "Expense management with custom distribution among users",
+      "item2": "Group management with multiple wallets and hierarchical organization",
+      "item3": "Real-time updates and offline support with data synchronization",
+      "item4": "Multiple language support and currency conversion",
+      "item5": "Premium features with Stripe subscription integration"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "Your email",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "message": "Message",
+      "messagePlaceholder": "Your message",
+      "sent": "Message sent!",
+      "sentDescription": "Thank you for your message. I'll get back to you soon."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Samuel Hrotik. All rights reserved."
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "metadata": {
+    "title": "Samuel Hrotik - Fullstack Developer",
+    "description": "Samuel Hrotik is a passionate fullstack developer specializing in Next.js and React, building modern web and mobile applications with cutting-edge technologies.",
+    "keywords": [
+      "Samuel Hrotik",
+      "Fullstack Developer",
+      "Next.js",
+      "React",
+      "Web Development",
+      "Mobile Applications",
+      "Software Engineer"
+    ]
+  }
+}

@@ -1,16 +1,24 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from "zod"
-import { Loader2 } from "lucide-react"
-import { toast } from "sonner"
-import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Loader2 } from "lucide-react";
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
+import type { LangType } from "~/localisation/languages";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -25,10 +33,14 @@ const formSchema = z.object({
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
-})
+});
 
-export function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+interface ContactFormProps {
+  langData?: LangType;
+}
+
+export function ContactForm({ langData }: ContactFormProps = {}) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -38,10 +50,10 @@ export function ContactForm() {
       subject: "",
       message: "",
     },
-  })
+  });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     const templateParams = {
       user_name: values.name,
@@ -59,12 +71,14 @@ export function ContactForm() {
       )
       .then(
         () => {
-          console.log(values)
-          setIsSubmitting(false)
-          form.reset()
-          toast('Message sent!', {
-            description: "Thank you for your message. I'll get back to you soon.",
-            })
+          // Form submitted successfully
+          setIsSubmitting(false);
+          form.reset();
+          toast(langData?.contact?.form?.sent ?? "Message sent!", {
+            description:
+              langData?.contact?.form?.sentDescription ??
+              "Thank you for your message. I'll get back to you soon.",
+          });
         },
         (error) => {
           console.log("Email send unsuccesfully", error);
@@ -75,15 +89,21 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                {" "}
+                <FormLabel>{langData?.contact?.form?.name ?? "Name"}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your name" {...field} />
+                  <Input
+                    placeholder={
+                      langData?.contact?.form?.namePlaceholder ?? "Your name"
+                    }
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -94,9 +114,17 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                {" "}
+                <FormLabel>
+                  {langData?.contact?.form?.email ?? "Email"}
+                </FormLabel>
                 <FormControl>
-                  <Input placeholder="Your email" {...field} />
+                  <Input
+                    placeholder={
+                      langData?.contact?.form?.emailPlaceholder ?? "Your email"
+                    }
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -108,9 +136,18 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              {" "}
+              <FormLabel>
+                {langData?.contact?.form?.subject ?? "Subject"}
+              </FormLabel>
               <FormControl>
-                <Input placeholder="Subject of your message" {...field} />
+                <Input
+                  placeholder={
+                    langData?.contact?.form?.subjectPlaceholder ??
+                    "Subject of your message"
+                  }
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -121,9 +158,19 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              {" "}
+              <FormLabel>
+                {langData?.contact?.form?.message ?? "Message"}
+              </FormLabel>
               <FormControl>
-                <Textarea placeholder="Your message" className="min-h-[150px] resize-none" {...field} />
+                <Textarea
+                  placeholder={
+                    langData?.contact?.form?.messagePlaceholder ??
+                    "Your message"
+                  }
+                  className="min-h-[150px] resize-none"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -132,14 +179,15 @@ export function ContactForm() {
         <Button type="submit" className="w-full" disabled={isSubmitting}>
           {isSubmitting ? (
             <>
+              {" "}
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              {langData?.buttons?.sending ?? "Sending..."}
             </>
           ) : (
-            "Send Message"
+            (langData?.buttons?.sendMessage ?? "Send Message")
           )}
         </Button>
       </form>
     </Form>
-  )
+  );
 }
