@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import emailjs from "@emailjs/browser";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -42,15 +43,33 @@ export function ContactForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values)
-      setIsSubmitting(false)
-      form.reset()
-      toast('Message sent!', {
-        description: "Thank you for your message. I'll get back to you soon.",
-        })
-    }, 1500)
+    const templateParams = {
+      user_name: values.name,
+      user_subject: values.subject,
+      user_email: values.email,
+      user_message: values.message,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PERSONAL_TOKEN,
+      )
+      .then(
+        (result: { text: string }) => {
+          console.log(values)
+          setIsSubmitting(false)
+          form.reset()
+          toast('Message sent!', {
+            description: "Thank you for your message. I'll get back to you soon.",
+            })
+        },
+        (error) => {
+          console.log("Email send unsuccesfully", error.text);
+        },
+      );
   }
 
   return (
