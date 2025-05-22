@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto container flex h-16 items-center justify-between">
+        <div className="px-4 mx-auto container flex h-16 items-center justify-between">
           <div className="font-bold text-xl">
             <Link href="/">DevPortfolio</Link>
           </div>
@@ -45,14 +45,14 @@ export default function Home() {
               <Mail className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               <span className="sr-only">Email</span>
             </Link>
-            <Button asChild>
+            <Button asChild className="hidden sm:inline-flex">
               <Link href="#contact">Contact Me</Link>
             </Button>
           </div>
         </div>
       </header>
       <main className="flex-1">
-        <section className="mx-auto container mx-auto py-24 sm:py-32">
+        <section className="px-2 mx-auto container py-24 sm:py-32">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="container mx-auto py-24 sm:py-32 border-t">
+        <section id="about" className="px-2 container mx-auto py-24 sm:py-32 border-t">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -118,7 +118,7 @@ export default function Home() {
         </section>
 
         <section id="experience" className="bg-muted/40 py-24 sm:py-32">
-          <div className="container mx-auto">
+          <div className="px-4 container mx-auto">
             <div className="flex items-center gap-2 mb-12">
               <BriefcaseIcon className="h-8 w-8 text-primary" />
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Work Experience</h2>
@@ -128,7 +128,7 @@ export default function Home() {
         </section>
 
         <section id="skills" className="bg-muted/40 py-24 sm:py-32">
-          <div className="container mx-auto">
+          <div className="px-2 container mx-auto">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8 text-center">Technical Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-background rounded-lg p-6 shadow-sm">
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="container mx-auto py-24 sm:py-32">
+        <section id="projects" className="px-2 container mx-auto py-24 sm:py-32">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8 text-center">Featured Projects</h2>
           <div className="grid gap-8">
             <ProjectCard
@@ -216,7 +216,7 @@ export default function Home() {
         </section>
 
         <section id="splitwallet" className="bg-muted/40 py-24 sm:py-32">
-          <div className="container mx-auto">
+          <div className="px-2 container mx-auto">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8 text-center">SplitWallet Case Study</h2>
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
@@ -315,7 +315,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="container mx-auto py-24 sm:py-32 border-t">
+        <section id="contact" className="px-2 container mx-auto py-24 sm:py-32 border-t">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Get In Touch</h2>
