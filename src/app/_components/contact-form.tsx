@@ -58,7 +58,7 @@ export function ContactForm() {
         process.env.NEXT_PUBLIC_EMAILJS_PERSONAL_TOKEN,
       )
       .then(
-        (result: { text: string }) => {
+        () => {
           console.log(values)
           setIsSubmitting(false)
           form.reset()
@@ -67,7 +67,7 @@ export function ContactForm() {
             })
         },
         (error) => {
-          console.log("Email send unsuccesfully", error.text);
+          console.log("Email send unsuccesfully", error);
         },
       );
   }
