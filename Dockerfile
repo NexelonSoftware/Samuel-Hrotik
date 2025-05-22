@@ -47,6 +47,7 @@ ENV AUTH_SECRET=${_AUTH_SECRET}
 ENV AUTH_DISCORD_ID=${_AUTH_DISCORD_ID}
 ENV AUTH_DISCORD_SECRET=${_AUTH_DISCORD_SECRET}
 ENV DATABASE_URL=${_DATABASE_URL}
+ENV NEXT_PUBLIC_SERVER_URL="https://samuelhrotik.nexelon.sk/"
 
 # Using npm as specified in package.json packageManager field
 RUN npm run build

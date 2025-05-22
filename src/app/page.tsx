@@ -100,17 +100,17 @@ export default function Home() {
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">About Me</h2>
               <p className="text-muted-foreground mb-4">
-                I'm a passionate fullstack developer with expertise in building modern web and mobile applications. With
+                I&apos;m a passionate fullstack developer with expertise in building modern web and mobile applications. With
                 a strong foundation in Next.js, React, and TypeScript, I create scalable, performant, and user-friendly
                 applications.
               </p>
               <p className="text-muted-foreground mb-4">
                 My experience spans across the entire development stack, from designing intuitive user interfaces to
-                implementing robust backend systems and database architectures. I'm particularly skilled in building
+                implementing robust backend systems and database architectures. I&apos;m particularly skilled in building
                 complex applications with sophisticated state management and synchronization systems.
               </p>
               <p className="text-muted-foreground">
-                I'm always eager to take on challenging projects that push the boundaries of what's possible with modern
+                I&apos;m always eager to take on challenging projects that push the boundaries of what&apos;s possible with modern
                 web technologies.
               </p>
             </div>
@@ -320,7 +320,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Get In Touch</h2>
               <p className="text-muted-foreground mb-4">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-2">
