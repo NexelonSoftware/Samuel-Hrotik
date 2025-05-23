@@ -139,7 +139,7 @@ export default async function Home({
         >
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div className="order-2 lg:order-1">
-              <div className="relative aspect-[18/15] h-[500px] overflow-hidden rounded-lg">
+              <div className="relative aspect-[18/15] max-h-[500px] overflow-hidden rounded-lg">
                 <Image
                   src="/About.jpg?height=400&width=400"
                   alt="Developer working"
