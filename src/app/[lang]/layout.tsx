@@ -42,6 +42,28 @@ export async function generateMetadata({
       { rel: "apple-touch-icon", sizes: "152x152", url: "/icon152x152.png" },
       { rel: "apple-touch-icon", sizes: "180x180", url: "/icon180x180.png" },
     ],
+    openGraph: {
+      title: langData.metadata.title,
+      description: langData.metadata.description,
+      url: `${env.NEXT_PUBLIC_SERVER_URL}/${lang}`,
+      siteName: langData.metadata.title,
+      images: [
+        {
+          url: `${env.NEXT_PUBLIC_SERVER_URL}/HeroPhoto.jpg`,
+          width: 1200,
+          height: 630,
+          alt: langData.metadata.title,
+        },
+      ],
+      locale: lang === "en" ? "en_US" : "sk_SK",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: langData.metadata.title,
+      description: langData.metadata.description,
+      images: [`${env.NEXT_PUBLIC_SERVER_URL}/HeroPhoto.jpg`],
+    },
     robots: {
       index: true,
       follow: true,

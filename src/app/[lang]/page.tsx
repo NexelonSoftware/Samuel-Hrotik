@@ -15,6 +15,7 @@ import { ContactForm } from "../_components/contact-form";
 import { ThemeToggle } from "../_components/theme-toggle";
 import { ExperienceTimeline } from "../_components/experience-timeline";
 import LocaleSwitcherNavbar from "../_components/LocaleSwitcherNavbar";
+import { SmoothScrollLink } from "../_components/smooth-scroll-link";
 import type { Locale } from "~/i18n.config";
 import { getLanguage } from "~/localisation/languages";
 
@@ -31,33 +32,35 @@ export default async function Home({
       <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="text-xl font-bold">
-            <Link href="/">{langData.navbar.devPortfolio}</Link>
+            <SmoothScrollLink href="#hero">
+              {langData.navbar.devPortfolio}
+            </SmoothScrollLink>
           </div>
           <nav className="hidden gap-6 md:flex">
-            <Link
+            <SmoothScrollLink
               href="#about"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               {langData.navbar.about}
-            </Link>
-            <Link
+            </SmoothScrollLink>
+            <SmoothScrollLink
               href="#skills"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               {langData.navbar.skills}
-            </Link>
-            <Link
+            </SmoothScrollLink>
+            <SmoothScrollLink
               href="#projects"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               {langData.navbar.projects}
-            </Link>
-            <Link
+            </SmoothScrollLink>
+            <SmoothScrollLink
               href="#contact"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               {langData.navbar.contact}
-            </Link>
+            </SmoothScrollLink>
           </nav>
           <div className="flex items-center justify-center gap-4">
             <LocaleSwitcherNavbar />
@@ -83,13 +86,15 @@ export default async function Home({
               <span className="sr-only">Email</span>
             </Link>
             <Button asChild className="hidden sm:inline-flex">
-              <Link href="#contact">{langData.buttons.contactMe}</Link>
+              <SmoothScrollLink href="#contact">
+                {langData.buttons.contactMe}
+              </SmoothScrollLink>
             </Button>
           </div>
         </div>
       </header>
       <main className="flex-1">
-        <section className="container mx-auto px-2 py-24 sm:py-32">
+        <section id="hero" className="container mx-auto px-2 py-24 sm:py-32">
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -104,13 +109,15 @@ export default async function Home({
               </p>
               <div className="flex gap-4">
                 <Button asChild>
-                  <Link href="#projects">
+                  <SmoothScrollLink href="#projects">
                     {langData.buttons.viewMyWork}{" "}
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </SmoothScrollLink>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href="#contact">{langData.buttons.getInTouch}</Link>
+                  <SmoothScrollLink href="#contact">
+                    {langData.buttons.getInTouch}
+                  </SmoothScrollLink>
                 </Button>
               </div>
             </div>
