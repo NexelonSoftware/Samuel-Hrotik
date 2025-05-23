@@ -36,7 +36,11 @@ export function middleware(request: NextRequest) {
   if (pathLocale) {
     const isDefaultLocale = pathLocale === defaultLocale;
     if (isDefaultLocale) {
-      let pathWithoutLocale = pathname.slice(`/${pathLocale}`.length) ?? "/";
+      let pathWithoutLocale =
+        pathname.slice(`/${pathLocale}`.length).length === 0
+          ? "/"
+          : pathname.slice(`/${pathLocale}`.length);
+
       if (request.nextUrl.search) pathWithoutLocale += request.nextUrl.search;
 
       const url = basePath + pathWithoutLocale;
