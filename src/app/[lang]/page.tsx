@@ -17,9 +17,10 @@ import { ThemeToggle } from "../_components/theme-toggle";
 import { ExperienceTimeline } from "../_components/experience-timeline";
 import LocaleSwitcherNavbar from "../_components/LocaleSwitcherNavbar";
 import { SmoothScrollLink } from "../_components/smooth-scroll-link";
-import type { Locale } from "~/i18n.config";
-import { getLanguage } from "~/localisation/languages";
+import type { Locale } from "~/language/i18n.config";
+import { getLanguage, ts } from "~/language/languages";
 import type { ProfileContent } from "~/types/profile";
+import { langMaps } from "~/language/langMaps";
 
 export default async function Home({
   params,
@@ -28,15 +29,15 @@ export default async function Home({
 }) {
   const { lang } = await params;
 
-  const langData = await getLanguage(lang);
-  const profile = langData.profile as ProfileContent;
+  const langObj = await getLanguage(lang);
+  const profile = langObj.profile as ProfileContent;
   return (
     <div className="flex min-h-screen flex-col">
       <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="text-xl font-bold">
             <SmoothScrollLink href="#hero">
-              {langData.navbar.devPortfolio}
+              {ts(langObj, langMaps.navbar.devPortfolio)}
             </SmoothScrollLink>
           </div>
           <nav className="hidden gap-6 md:flex">
@@ -44,30 +45,30 @@ export default async function Home({
               href="#about"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              {langData.navbar.about}
+              {ts(langObj, langMaps.navbar.about)}
             </SmoothScrollLink>
             <SmoothScrollLink
               href="#skills"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              {langData.navbar.skills}
+              {ts(langObj, langMaps.navbar.skills)}
             </SmoothScrollLink>
             <SmoothScrollLink
               href="#projects"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              {langData.navbar.projects}
+              {ts(langObj, langMaps.navbar.projects)}
             </SmoothScrollLink>
             <SmoothScrollLink
               href="#contact"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              {langData.navbar.contact}
+              {ts(langObj, langMaps.navbar.contact)}
             </SmoothScrollLink>
           </nav>
           <div className="flex items-center justify-center gap-4">
             <LocaleSwitcherNavbar />
-            <ThemeToggle langData={langData} />
+            <ThemeToggle />
             <Link
               href="https://github.com/Hroco"
               target="_blank"
@@ -90,7 +91,7 @@ export default async function Home({
             </Link>
             <Button asChild className="hidden sm:inline-flex">
               <SmoothScrollLink href="#contact">
-                {langData.buttons.contactMe}
+                {ts(langObj, langMaps.buttons.contactMe)}
               </SmoothScrollLink>
             </Button>
           </div>
@@ -101,30 +102,30 @@ export default async function Home({
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                {langData.header.fullstackDeveloper}
+                {ts(langObj, langMaps.header.fullstackDeveloper)}
                 <span className="text-primary">
                   {" "}
-                  {langData.header.specialization}
+                  {ts(langObj, langMaps.header.specialization)}
                 </span>
               </h1>
               <p className="text-muted-foreground text-xl">
-                {langData.header.buildingModern}
+                {ts(langObj, langMaps.header.buildingModern)}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild>
                   <SmoothScrollLink href="#projects">
-                    {langData.buttons.viewMyWork}{" "}
+                    {ts(langObj, langMaps.buttons.viewMyWork)}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </SmoothScrollLink>
                 </Button>
                 <Button variant="outline" asChild>
                   <SmoothScrollLink href="#contact">
-                    {langData.buttons.getInTouch}
+                    {ts(langObj, langMaps.buttons.getInTouch)}
                   </SmoothScrollLink>
                 </Button>
                 <Button variant="secondary" asChild>
-                  <Link href="/cv" className="flex items-center">
-                    {langData.buttons.downloadCv}
+                  <Link href="/personal-cv" className="flex items-center">
+                    {ts(langObj, langMaps.buttons.downloadCv)}
                     <Download className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -159,16 +160,16 @@ export default async function Home({
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                {langData.about.title}
+                {ts(langObj, langMaps.about.title)}
               </h2>
               <p className="text-muted-foreground mb-4">
-                {langData.about.paragraph1}
+                {ts(langObj, langMaps.about.paragraph1)}
               </p>
               <p className="text-muted-foreground mb-4">
-                {langData.about.paragraph2}
+                {ts(langObj, langMaps.about.paragraph2)}
               </p>
               <p className="text-muted-foreground">
-                {langData.about.paragraph3}
+                {ts(langObj, langMaps.about.paragraph3)}
               </p>
             </div>
           </div>
@@ -179,7 +180,7 @@ export default async function Home({
             <div className="mb-12 flex items-center gap-2">
               <BriefcaseIcon className="text-primary h-8 w-8" />
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                {langData.experience.title}
+                {ts(langObj, langMaps.experience.title)}
               </h2>
             </div>
             <ExperienceTimeline experiences={profile.experiences} />
@@ -189,12 +190,12 @@ export default async function Home({
         <section id="skills" className="bg-muted/40 py-24 sm:py-32">
           <div className="container mx-auto px-2">
             <h2 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
-              {langData.skills.title}
+              {ts(langObj, langMaps.skills.title)}
             </h2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="bg-background rounded-lg p-6 shadow-sm">
                 <h3 className="mb-4 text-xl font-bold">
-                  {langData.skills.frontend}
+                  {ts(langObj, langMaps.skills.frontend)}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   <SkillBadge name="Next.js" />
@@ -209,7 +210,7 @@ export default async function Home({
               </div>
               <div className="bg-background rounded-lg p-6 shadow-sm">
                 <h3 className="mb-4 text-xl font-bold">
-                  {langData.skills.backend}
+                  {ts(langObj, langMaps.skills.backend)}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   <SkillBadge name="Node.js" />
@@ -224,7 +225,7 @@ export default async function Home({
               </div>
               <div className="bg-background rounded-lg p-6 shadow-sm">
                 <h3 className="mb-4 text-xl font-bold">
-                  {langData.skills.devops}
+                  {ts(langObj, langMaps.skills.devops)}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   <SkillBadge name="Git" />
@@ -239,7 +240,7 @@ export default async function Home({
               </div>
               <div className="bg-background rounded-lg p-6 shadow-sm">
                 <h3 className="mb-4 text-xl font-bold">
-                  {langData.skills.other}
+                  {ts(langObj, langMaps.skills.other)}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   <SkillBadge name="Agile" />
@@ -261,12 +262,16 @@ export default async function Home({
           className="container mx-auto px-2 py-24 sm:py-32"
         >
           <h2 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
-            {langData.projects.title}
+            {ts(langObj, langMaps.projects.title)}
           </h2>
           <div className="grid gap-8">
             <ProjectCard
-              title={langData.projects.splitwallet.title}
-              description={langData.projects.splitwallet.description}
+              langObj={langObj}
+              title={ts(langObj, langMaps.projects.splitwallet.title)}
+              description={ts(
+                langObj,
+                langMaps.projects.splitwallet.description,
+              )}
               image="/Splitwallet.png?height=724&width=1290"
               tags={[
                 "Next.js",
@@ -279,23 +284,22 @@ export default async function Home({
               ]}
               link="https://splitwallet.nexelon.sk/"
               featured={true}
-              langData={langData}
             />
             {/* 
             <div className="grid gap-8 md:grid-cols-2">
               <ProjectCard
-                title={langData.projects.warehouse.title}
-                description={langData.projects.warehouse.description}
+                title={ts(langObj, langMaps.projects.warehouse.title)}
+                description={ts(langObj, langMaps.projects.warehouse.description}
                 image="/Warehouse.png?height=300&width=400"
                 tags={["Next.js", "React", "PostgreSQL"]}
-                langData={langData}
+                langData={ts(langObj, langMaps)}
               />
               <ProjectCard
-                title={langData.projects.invoice.title}
-                description={langData.projects.invoice.description}
+                title={ts(langObj, langMaps.projects.invoice.title}
+                description={ts(langObj, langMaps.projects.invoice.description}
                 image="/InvoiceGenerator.png?height=300&width=400"
                 tags={["React", "Electron", "Tailwind CSS"]}
-                langData={langData}
+                langData={ts(langObj, langMaps}
               />
             </div>
             */}
@@ -305,7 +309,7 @@ export default async function Home({
         <section id="splitwallet" className="bg-muted/40 py-24 sm:py-32">
           <div className="container mx-auto px-2">
             <h2 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
-              {langData.caseStudy.title}
+              {ts(langObj, langMaps.caseStudy.title)}
             </h2>
             <div className="grid items-start gap-12 lg:grid-cols-2">
               <div>
@@ -346,61 +350,81 @@ export default async function Home({
               </div>
               <div>
                 <h3 className="mb-4 text-2xl font-bold">
-                  {langData.caseStudy.overview.title}
+                  {ts(langObj, langMaps.caseStudy.overview.title)}
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  {langData.caseStudy.overview.description}
+                  {ts(langObj, langMaps.caseStudy.overview.description)}
                 </p>
 
                 <h3 className="mb-4 text-2xl font-bold">
-                  {langData.caseStudy.technical.title}
+                  {ts(langObj, langMaps.caseStudy.technical.title)}
                 </h3>
                 <ul className="text-muted-foreground mb-6 space-y-2">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.technical.item1}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.technical.item1)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.technical.item2}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.technical.item2)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.technical.item3}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.technical.item3)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.technical.item4}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.technical.item4)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.technical.item5}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.technical.item5)}
+                    </span>
                   </li>
                 </ul>
 
                 <h3 className="mb-4 text-2xl font-bold">
-                  {langData.caseStudy.features.title}
+                  {ts(langObj, langMaps.caseStudy.features.title)}
                 </h3>
                 <ul className="text-muted-foreground space-y-2">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.features.item1}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.features.item1)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.features.item2}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.features.item2)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.features.item3}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.features.item3)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.features.item4}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.features.item4)}
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>{langData.caseStudy.features.item5}</span>
+                    <span>
+                      {ts(langObj, langMaps.caseStudy.features.item5)}
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -415,10 +439,10 @@ export default async function Home({
           <div className="grid items-start gap-8 lg:grid-cols-2">
             <div>
               <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                {langData.contact.title}
+                {ts(langObj, langMaps.contact.title)}
               </h2>
               <p className="text-muted-foreground mb-4">
-                {langData.contact.description}
+                {ts(langObj, langMaps.contact.description)}
               </p>
               <div className="mb-6 space-y-4">
                 <Link
@@ -450,7 +474,7 @@ export default async function Home({
                 </Link>
               </div>
             </div>
-            <ContactForm langData={langData} />
+            <ContactForm />
           </div>
         </section>
       </main>
@@ -458,7 +482,7 @@ export default async function Home({
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="text-center md:text-left">
             <p className="text-muted-foreground text-sm">
-              {langData.footer.copyright.replace(
+              {ts(langObj, langMaps.footer.copyright).replace(
                 "{year}",
                 new Date().getFullYear().toString(),
               )}

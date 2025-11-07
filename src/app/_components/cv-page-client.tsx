@@ -1,53 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useMemo } from "react";
+import { useCallback } from "react";
 import { Download } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import type {
-  Experience,
-  PersonalInfo,
-  ProjectSummary,
-  SkillCategory,
-} from "@/types/profile";
+
+import useTranslation from "~/language/useTranslation";
+import type { LangType } from "~/language/languages";
 
 type CVPageClientProps = {
-  headerTitle: string;
-  headerSubtitle: string;
-  summaryTitle: string;
-  summaryParagraphs: string[];
-  experienceTitle: string;
-  skillsTitle: string;
-  projectsTitle: string;
-  projectDescriptions: Record<string, string>;
-  personalInfo: PersonalInfo;
-  experiences: Experience[];
-  skillCategories: SkillCategory[];
-  projectSummaries: ProjectSummary[];
-  downloadPdfLabel: string;
-  keySkillsLabel: string;
-  technologiesLabel: string;
+  langObj: LangType;
 };
 
-export function CVPageClient(props: CVPageClientProps) {
-  const {
-    headerTitle,
-    headerSubtitle,
-    summaryTitle,
-    summaryParagraphs,
-    experienceTitle,
-    skillsTitle,
-    projectsTitle,
-    projectDescriptions,
-    personalInfo,
-    experiences,
-    skillCategories,
-    projectSummaries,
-    downloadPdfLabel,
-    keySkillsLabel,
-    technologiesLabel,
-  } = props;
+export function CVPageClient({ langObj }: CVPageClientProps) {
+  const { t, lang } = useTranslation();
 
   const handlePrint = useCallback(() => {
     if (typeof window === "undefined") {
@@ -57,44 +24,37 @@ export function CVPageClient(props: CVPageClientProps) {
     window.print();
   }, []);
 
-  const projects = useMemo(
-    () =>
-      projectSummaries.map((project) => ({
-        ...project,
-        description: projectDescriptions[project.title] ?? project.description,
-      })),
-    [projectDescriptions, projectSummaries],
-  );
-
   return (
     <div className="bg-muted min-h-screen py-10 print:bg-white print:py-0">
       <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4">
         <div className="flex justify-end print:hidden">
           <Button onClick={handlePrint} className="gap-2">
             <Download className="h-4 w-4" />
-            <span>{downloadPdfLabel}</span>
+            <span>{t(lang.buttons.downloadPdf)}</span>
           </Button>
         </div>
 
         <div className="bg-background text-foreground border-border rounded-lg border p-8 shadow-sm print:min-h-screen print:border-0 print:bg-white print:p-10 print:shadow-none">
           <header className="border-border border-b pb-6">
             <h1 className="text-3xl leading-tight font-bold md:text-4xl">
-              {personalInfo.name}
+              {t(lang.profile.personalInfo.name)}
             </h1>
             <p className="text-muted-foreground mt-1 text-lg font-semibold">
-              {headerTitle}
+              {t(lang.header.fullstackDeveloper)}
             </p>
-            <p className="text-muted-foreground text-sm">{headerSubtitle}</p>
+            <p className="text-muted-foreground text-sm">
+              {t(lang.header.specialization)}
+            </p>
 
             <div className="text-muted-foreground mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm print:text-black">
-              <span>{personalInfo.location}</span>
+              <span>{t(lang.profile.personalInfo.location)}</span>
               <Link
-                href={`mailto:${personalInfo.email}`}
+                href={`mailto:${t(lang.profile.personalInfo.email)}`}
                 className="decoration-muted-foreground/60 underline decoration-1 underline-offset-2"
               >
-                {personalInfo.email}
+                {t(lang.profile.personalInfo.email)}
               </Link>
-              {personalInfo.links.map((link) => (
+              {langObj.profile.personalInfo.links.map((link) => (
                 <Link
                   key={link.url}
                   href={link.url}
@@ -107,9 +67,9 @@ export function CVPageClient(props: CVPageClientProps) {
               ))}
             </div>
 
-            {personalInfo.contactDetails?.length ? (
+            {langObj.profile.personalInfo.contactDetails?.length ? (
               <dl className="text-muted-foreground mt-4 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2 print:text-black">
-                {personalInfo.contactDetails.map((detail) => {
+                {langObj.profile.personalInfo.contactDetails.map((detail) => {
                   const noteText = detail.note ? ` ${detail.note}` : "";
                   const key = `${detail.label}-${detail.value}`;
                   const isExternalLink =
@@ -145,21 +105,21 @@ export function CVPageClient(props: CVPageClientProps) {
             <section className="space-y-8">
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
-                  {summaryTitle}
+                  {t(lang.about.title)}
                 </h2>
                 <div className="text-muted-foreground mt-3 space-y-3 text-sm leading-relaxed print:text-black">
-                  {summaryParagraphs.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
+                  <p>{t(lang.about.paragraph1)}</p>
+                  <p>{t(lang.about.paragraph2)}</p>
+                  <p>{t(lang.about.paragraph3)}</p>
                 </div>
               </div>
 
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
-                  {skillsTitle}
+                  {t(lang.skills.title)}
                 </h2>
                 <div className="mt-3 space-y-4 text-sm">
-                  {skillCategories.map((category) => (
+                  {langObj.profile.skillCategories.map((category) => (
                     <div key={category.name} className="space-y-1">
                       <h3 className="text-foreground font-semibold print:text-black">
                         {category.name}
@@ -176,10 +136,10 @@ export function CVPageClient(props: CVPageClientProps) {
             <section className="space-y-8">
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
-                  {experienceTitle}
+                  {t(lang.experience.title)}
                 </h2>
                 <div className="mt-3 space-y-6">
-                  {experiences.map((experience) => (
+                  {langObj.profile.experiences.map((experience) => (
                     <article
                       key={`${experience.company}-${experience.position}-${experience.period}`}
                       className="space-y-1"
@@ -203,7 +163,7 @@ export function CVPageClient(props: CVPageClientProps) {
                       {experience.skills?.length ? (
                         <p className="text-muted-foreground text-sm print:text-black">
                           <span className="text-foreground font-semibold print:text-black">
-                            {keySkillsLabel}
+                            {t(lang.cv.keySkills)}
                           </span>{" "}
                           {experience.skills.join(", ")}
                         </p>
@@ -215,10 +175,10 @@ export function CVPageClient(props: CVPageClientProps) {
 
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
-                  {projectsTitle}
+                  {t(lang.projects.title)}
                 </h2>
                 <div className="mt-3 space-y-5">
-                  {projects.map((project) => (
+                  {langObj.profile.projectSummaries.map((project) => (
                     <article key={project.title} className="space-y-1">
                       <div className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
                         <h3 className="text-foreground text-lg font-semibold print:text-black">
@@ -240,7 +200,7 @@ export function CVPageClient(props: CVPageClientProps) {
                       </p>
                       <p className="text-muted-foreground text-sm print:text-black">
                         <span className="text-foreground font-semibold print:text-black">
-                          {technologiesLabel}
+                          {t(lang.cv.technologies)}
                         </span>{" "}
                         {project.technologies.join(", ")}
                       </p>

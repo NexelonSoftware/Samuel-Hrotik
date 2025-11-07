@@ -5,16 +5,17 @@ import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import type { LangType } from "~/localisation/languages";
+import { langMaps } from "~/language/langMaps";
+import { ts, type LangType } from "~/language/languages";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   tags: string[];
+  langObj: LangType;
   link?: string;
   featured?: boolean;
-  langData?: LangType;
 }
 
 export function ProjectCard({
@@ -22,9 +23,9 @@ export function ProjectCard({
   description,
   image,
   tags,
+  langObj,
   link = "#",
   featured = false,
-  langData,
 }: ProjectCardProps) {
   if (featured) {
     return (
@@ -54,7 +55,7 @@ export function ProjectCard({
               href={link}
               className={buttonVariants({ variant: "outline" })}
             >
-              {langData?.buttons?.viewProject ?? "View Project"}{" "}
+              {ts(langObj, langMaps.buttons.viewProject)}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
@@ -85,17 +86,15 @@ export function ProjectCard({
           {tags.length > 3 && (
             <Badge variant="outline">
               +{tags.length - 3}{" "}
-              {langData?.projects?.more
-                ? langData.projects.more.replace(
-                    "{count}",
-                    String(tags.length - 3),
-                  )
-                : "more"}
+              {ts(langObj, langMaps.projects.more).replace(
+                "{count}",
+                String(tags.length - 3),
+              )}
             </Badge>
           )}
         </div>
         <Link href={link} className={buttonVariants({ variant: "outline" })}>
-          {langData?.buttons?.viewDetails ?? "View Details"}{" "}
+          {ts(langObj, langMaps.buttons.viewDetails)}
           <ArrowRight className="ml-2 h-3 w-3" />
         </Link>
       </CardContent>

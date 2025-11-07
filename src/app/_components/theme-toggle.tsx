@@ -11,13 +11,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import type { LangType } from "~/localisation/languages";
+import useTranslation from "~/language/useTranslation";
 
-interface ThemeToggleProps {
-  langData?: LangType;
-}
-
-export function ThemeToggle({ langData }: ThemeToggleProps = {}) {
+export function ThemeToggle() {
+  const { t, lang } = useTranslation();
   const { setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -30,9 +27,7 @@ export function ThemeToggle({ langData }: ThemeToggleProps = {}) {
       <Button variant="ghost" size="icon" className="h-9 w-9">
         <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
         <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-        <span className="sr-only">
-          {langData?.theme?.toggle ?? "Toggle theme"}
-        </span>
+        <span className="sr-only">{t(lang.theme.toggle)}</span>
       </Button>
     );
   }
@@ -44,24 +39,22 @@ export function ThemeToggle({ langData }: ThemeToggleProps = {}) {
         <Button variant="ghost" size="icon" className="h-9 w-9">
           <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-          <span className="sr-only">
-            {langData?.theme?.toggle ?? "Toggle theme"}
-          </span>
+          <span className="sr-only">{t(lang.theme.toggle)}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {" "}
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Sun className="mr-2 h-4 w-4" />
-          <span>{langData?.theme?.light ?? "Light"}</span>
+          <span>{t(lang.theme.light)}</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <Moon className="mr-2 h-4 w-4" />
-          <span>{langData?.theme?.dark ?? "Dark"}</span>
+          <span>{t(lang.theme.dark)}</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <span className="mr-2">💻</span>
-          <span>{langData?.theme?.system ?? "System"}</span>
+          <span>{t(lang.theme.system)}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

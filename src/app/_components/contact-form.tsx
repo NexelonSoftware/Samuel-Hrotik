@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
-import type { LangType } from "~/localisation/languages";
+import useTranslation from "~/language/useTranslation";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -35,11 +35,8 @@ const formSchema = z.object({
   }),
 });
 
-interface ContactFormProps {
-  langData?: LangType;
-}
-
-export function ContactForm({ langData }: ContactFormProps = {}) {
+export function ContactForm() {
+  const { t, lang } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -96,12 +93,10 @@ export function ContactForm({ langData }: ContactFormProps = {}) {
             render={({ field }) => (
               <FormItem>
                 {" "}
-                <FormLabel>{langData?.contact?.form?.name ?? "Name"}</FormLabel>
+                <FormLabel>{t(lang.contact.form.name)}</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={
-                      langData?.contact?.form?.namePlaceholder ?? "Your name"
-                    }
+                    placeholder={t(lang.contact.form.namePlaceholder)}
                     {...field}
                   />
                 </FormControl>
@@ -115,14 +110,10 @@ export function ContactForm({ langData }: ContactFormProps = {}) {
             render={({ field }) => (
               <FormItem>
                 {" "}
-                <FormLabel>
-                  {langData?.contact?.form?.email ?? "Email"}
-                </FormLabel>
+                <FormLabel>{t(lang.contact.form.email)}</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={
-                      langData?.contact?.form?.emailPlaceholder ?? "Your email"
-                    }
+                    placeholder={t(lang.contact.form.emailPlaceholder)}
                     {...field}
                   />
                 </FormControl>
@@ -137,15 +128,10 @@ export function ContactForm({ langData }: ContactFormProps = {}) {
           render={({ field }) => (
             <FormItem>
               {" "}
-              <FormLabel>
-                {langData?.contact?.form?.subject ?? "Subject"}
-              </FormLabel>
+              <FormLabel>{t(lang.contact.form.subject)}</FormLabel>
               <FormControl>
                 <Input
-                  placeholder={
-                    langData?.contact?.form?.subjectPlaceholder ??
-                    "Subject of your message"
-                  }
+                  placeholder={t(lang.contact.form.subjectPlaceholder)}
                   {...field}
                 />
               </FormControl>
@@ -159,15 +145,10 @@ export function ContactForm({ langData }: ContactFormProps = {}) {
           render={({ field }) => (
             <FormItem>
               {" "}
-              <FormLabel>
-                {langData?.contact?.form?.message ?? "Message"}
-              </FormLabel>
+              <FormLabel>{t(lang.contact.form.message)}</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder={
-                    langData?.contact?.form?.messagePlaceholder ??
-                    "Your message"
-                  }
+                  placeholder={t(lang.contact.form.messagePlaceholder)}
                   className="min-h-[150px] resize-none"
                   {...field}
                 />
@@ -181,10 +162,10 @@ export function ContactForm({ langData }: ContactFormProps = {}) {
             <>
               {" "}
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              {langData?.buttons?.sending ?? "Sending..."}
+              {t(lang.buttons.sending)}
             </>
           ) : (
-            (langData?.buttons?.sendMessage ?? "Send Message")
+            t(lang.buttons.sendMessage)
           )}
         </Button>
       </form>

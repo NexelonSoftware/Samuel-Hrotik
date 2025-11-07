@@ -7,9 +7,9 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { Toaster } from "~/components/ui/sonner";
 import { ThemeProvider } from "next-themes";
 import { env } from "~/env";
-import { TranslationProvider } from "~/localisation/useTranslation";
-import type { Locale } from "~/i18n.config";
-import { getLanguage } from "~/localisation/languages";
+import { TranslationProvider } from "~/language/useTranslation";
+import type { Locale } from "~/language/i18n.config";
+import { getLanguage } from "~/language/languages";
 
 export async function generateMetadata({
   params,

@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { i18n, languagesLabels, type Locale } from "~/i18n.config";
-import { localeFlagsNavbar } from "~/localisation/languages";
+import { i18n, languagesLabels, type Locale } from "~/language/i18n.config";
+import { localeFlagsNavbar } from "~/language/languages";
 import {
   DropdownMenu,
   DropdownMenuContent,

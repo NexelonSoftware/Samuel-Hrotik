@@ -17,7 +17,8 @@
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "generate:lang": "node --loader ts-node/esm src/language/generate-langMaps.mts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.2",
@@ -50,6 +51,7 @@
     "sonner": "^2.0.3",
     "superjson": "^2.2.1",
     "tailwind-merge": "^3.3.0",
+    "ts-node": "^10.9.2",
     "zod": "^3.25.17"
   },
   "devDependencies": {
