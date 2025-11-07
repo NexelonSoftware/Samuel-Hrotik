@@ -19,12 +19,20 @@ export type ProjectSummary = {
   technologies: string[];
 };
 
+export type ContactDetail = {
+  label: string;
+  value: string;
+  note?: string;
+  href?: string;
+};
+
 export type PersonalInfo = {
   name: string;
   role: string;
   location: string;
   email: string;
   links: { label: string; url: string }[];
+  contactDetails?: ContactDetail[];
 };
 
 export type ProfileContent = {

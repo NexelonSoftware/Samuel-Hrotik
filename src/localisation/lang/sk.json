@@ -131,6 +131,46 @@
         {
           "label": "LinkedIn",
           "url": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
+        },
+        {
+          "label": "Webstránka",
+          "url": "https://samuelhrotik.nexelon.sk/"
+        }
+      ],
+      "contactDetails": [
+        {
+          "label": "Dátum narodenia",
+          "value": "06/03/1995"
+        },
+        {
+          "label": "Národnosť",
+          "value": "Slovenská"
+        },
+        {
+          "label": "Telefón",
+          "value": "(+421) 915 161 060",
+          "href": "tel:+421915161060",
+          "note": "(Mobil)"
+        },
+        {
+          "label": "Emailová adresa",
+          "value": "samuel.hrotik@gmail.com",
+          "href": "mailto:samuel.hrotik@gmail.com"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "www.linkedin.com/in/samuel-hrotik-071399132",
+          "href": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
+        },
+        {
+          "label": "WhatsApp Messenger",
+          "value": "+421 915 161 060",
+          "href": "https://wa.me/421915161060"
+        },
+        {
+          "label": "Adresa",
+          "value": "Sasinkovo 90, 92065 Sasinkovo, Slovensko",
+          "note": "(Domov)"
         }
       ]
     },

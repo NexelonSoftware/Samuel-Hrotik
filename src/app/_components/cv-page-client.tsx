@@ -102,6 +102,39 @@ export function CVPageClient(props: CVPageClientProps) {
                 </Link>
               ))}
             </div>
+
+            {personalInfo.contactDetails?.length ? (
+              <dl className="text-muted-foreground mt-4 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2 print:text-black">
+                {personalInfo.contactDetails.map((detail) => {
+                  const noteText = detail.note ? ` ${detail.note}` : "";
+                  const key = `${detail.label}-${detail.value}`;
+                  const isExternalLink =
+                    detail.href?.startsWith("http") ?? false;
+
+                  return (
+                    <div key={key} className="flex flex-col gap-0.5">
+                      <dt className="text-foreground font-semibold print:text-black">
+                        {detail.label}
+                      </dt>
+                      <dd className="text-muted-foreground print:text-black">
+                        {detail.href ? (
+                          <Link
+                            href={detail.href}
+                            className="decoration-muted-foreground/60 underline decoration-1 underline-offset-2"
+                            target={isExternalLink ? "_blank" : undefined}
+                            rel={isExternalLink ? "noreferrer" : undefined}
+                          >
+                            {`${detail.value}${noteText}`}
+                          </Link>
+                        ) : (
+                          `${detail.value}${noteText}`
+                        )}
+                      </dd>
+                    </div>
+                  );
+                })}
+              </dl>
+            ) : null}
           </header>
 
           <div className="mt-6 grid gap-8 md:grid-cols-[1fr_1.5fr] md:gap-10">
