@@ -71,10 +71,8 @@ export function ContactForm() {
           // Form submitted successfully
           setIsSubmitting(false);
           form.reset();
-          toast(langData?.contact?.form?.sent ?? "Message sent!", {
-            description:
-              langData?.contact?.form?.sentDescription ??
-              "Thank you for your message. I'll get back to you soon.",
+          toast(t(lang.contact.form.sent), {
+            description: t(lang.contact.form.sentDescription),
           });
         },
         (error) => {
