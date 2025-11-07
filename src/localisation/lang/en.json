@@ -11,6 +11,8 @@
     "viewMyWork": "View My Work",
     "getInTouch": "Get In Touch",
     "contactMe": "Contact Me",
+    "downloadCv": "Download CV",
+    "downloadPdf": "Download PDF",
     "viewProject": "View Project",
     "viewDetails": "View Details",
     "sendMessage": "Send Message",
@@ -112,6 +114,139 @@
       "Web Development",
       "Mobile Applications",
       "Software Engineer"
+    ]
+  },
+  "profile": {
+    "personalInfo": {
+      "name": "Samuel Hrotik",
+      "role": "Fullstack Developer specialized in Next.js & React",
+      "location": "Nitra, Slovakia",
+      "email": "samuel.hrotik@gmail.com",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Hroco"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
+        }
+      ]
+    },
+    "experiences": [
+      {
+        "company": "Foxit",
+        "position": "Development Engineer and PDF Specialist",
+        "period": "Jan 2025 - Present · 5 mos",
+        "location": "Slovakia · Remote",
+        "skills": ["PDF", "Next.js", "C++", "Web Development"]
+      },
+      {
+        "company": "Foxit",
+        "position": "Software Engineer",
+        "period": "Oct 2023 - Jan 2025 · 1 yr 4 mos",
+        "location": "Slovakia · Remote",
+        "skills": [
+          "Git",
+          "English",
+          "Cross-platform Development",
+          "JavaScript",
+          "ESLint",
+          "React.js",
+          "Cloud Applications"
+        ]
+      },
+      {
+        "company": "Foxit",
+        "position": "Junior Software Engineer",
+        "period": "Jul 2022 - Oct 2023 · 1 yr 4 mos",
+        "location": "Slovakia · Remote",
+        "skills": ["C++", "Python"]
+      },
+      {
+        "company": "Foxit",
+        "position": "Quality Assurance Engineer",
+        "period": "Nov 2020 - Jul 2022 · 1 yr 9 mos",
+        "location": "Slovakia · Remote"
+      },
+      {
+        "company": "HIMA",
+        "position": "Developer",
+        "period": "Jun 2020 - Sep 2020 · 4 mos",
+        "location": "Nitra Region, Slovakia",
+        "description": "Development of pipeline application system FLOWorX which includes leak detection. (C++, Qt)",
+        "skills": ["C++", "Qt"]
+      }
+    ],
+    "skillCategories": [
+      {
+        "name": "Frontend Development",
+        "items": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Zustand",
+          "React Query",
+          "Shadcn/UI",
+          "Responsive Design"
+        ]
+      },
+      {
+        "name": "Backend Development",
+        "items": [
+          "Node.js",
+          "tRPC",
+          "PostgreSQL",
+          "Drizzle ORM",
+          "NextAuth.js",
+          "API Design",
+          "Firebase",
+          "Serverless"
+        ]
+      },
+      {
+        "name": "DevOps & Tools",
+        "items": [
+          "Git",
+          "Docker",
+          "Turborepo",
+          "CI/CD",
+          "Vercel",
+          "AWS",
+          "Kubernetes",
+          "Monorepo"
+        ]
+      },
+      {
+        "name": "Other Skills",
+        "items": [
+          "Agile",
+          "UI/UX Design",
+          "Performance Optimization",
+          "Internationalization",
+          "Accessibility",
+          "Testing",
+          "Stripe Integration",
+          "AI Integration"
+        ]
+      }
+    ],
+    "projectSummaries": [
+      {
+        "title": "SplitWallet",
+        "description": "A sophisticated expense-sharing application designed to help users track, manage, and split expenses within groups.",
+        "link": "https://splitwallet.nexelon.sk/",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "tRPC",
+          "PostgreSQL",
+          "Drizzle ORM",
+          "Zustand",
+          "Tailwind CSS"
+        ]
+      }
     ]
   }
 }

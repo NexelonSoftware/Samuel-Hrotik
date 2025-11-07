@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   BriefcaseIcon,
+  Download,
   Github,
   Linkedin,
   Mail,
@@ -18,6 +19,7 @@ import LocaleSwitcherNavbar from "../_components/LocaleSwitcherNavbar";
 import { SmoothScrollLink } from "../_components/smooth-scroll-link";
 import type { Locale } from "~/i18n.config";
 import { getLanguage } from "~/localisation/languages";
+import type { ProfileContent } from "~/types/profile";
 
 export default async function Home({
   params,
@@ -27,6 +29,7 @@ export default async function Home({
   const { lang } = await params;
 
   const langData = await getLanguage(lang);
+  const profile = langData.profile as ProfileContent;
   return (
     <div className="flex min-h-screen flex-col">
       <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b backdrop-blur">
@@ -107,7 +110,7 @@ export default async function Home({
               <p className="text-muted-foreground text-xl">
                 {langData.header.buildingModern}
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <Button asChild>
                   <SmoothScrollLink href="#projects">
                     {langData.buttons.viewMyWork}{" "}
@@ -118,6 +121,12 @@ export default async function Home({
                   <SmoothScrollLink href="#contact">
                     {langData.buttons.getInTouch}
                   </SmoothScrollLink>
+                </Button>
+                <Button variant="secondary" asChild>
+                  <Link href="/cv" className="flex items-center">
+                    {langData.buttons.downloadCv}
+                    <Download className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -173,7 +182,7 @@ export default async function Home({
                 {langData.experience.title}
               </h2>
             </div>
-            <ExperienceTimeline />
+            <ExperienceTimeline experiences={profile.experiences} />
           </div>
         </section>
 

@@ -11,6 +11,8 @@
     "viewMyWork": "Zobraziť moju prácu",
     "getInTouch": "Kontaktujte ma",
     "contactMe": "Kontaktujte ma",
+    "downloadCv": "Stiahnuť životopis",
+    "downloadPdf": "Stiahnuť PDF",
     "viewProject": "Zobraziť projekt",
     "viewDetails": "Zobraziť detaily",
     "sendMessage": "Odoslať správu",
@@ -113,6 +115,139 @@
       "Mobilné aplikácie",
       "Softvérový inžiniering",
       "Vývoj aplikácií"
+    ]
+  },
+  "profile": {
+    "personalInfo": {
+      "name": "Samuel Hrotik",
+      "role": "Fullstack vývojár so špecializáciou na Next.js & React",
+      "location": "Nitra, Slovensko",
+      "email": "samuel.hrotik@gmail.com",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Hroco"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
+        }
+      ]
+    },
+    "experiences": [
+      {
+        "company": "Foxit",
+        "position": "Development Engineer a PDF špecialista",
+        "period": "jan 2025 - súčasnosť · 5 mes.",
+        "location": "Slovensko · na diaľku",
+        "skills": ["PDF", "Next.js", "C++", "Web Development"]
+      },
+      {
+        "company": "Foxit",
+        "position": "Softvérový inžinier",
+        "period": "okt 2023 - jan 2025 · 1 rok 4 mes.",
+        "location": "Slovensko · na diaľku",
+        "skills": [
+          "Git",
+          "English",
+          "Cross-platform Development",
+          "JavaScript",
+          "ESLint",
+          "React.js",
+          "Cloud Applications"
+        ]
+      },
+      {
+        "company": "Foxit",
+        "position": "Junior softvérový inžinier",
+        "period": "júl 2022 - okt 2023 · 1 rok 4 mes.",
+        "location": "Slovensko · na diaľku",
+        "skills": ["C++", "Python"]
+      },
+      {
+        "company": "Foxit",
+        "position": "Quality Assurance Engineer",
+        "period": "nov 2020 - júl 2022 · 1 rok 9 mes.",
+        "location": "Slovensko · na diaľku"
+      },
+      {
+        "company": "HIMA",
+        "position": "Vývojár",
+        "period": "jún 2020 - sep 2020 · 4 mes.",
+        "location": "Nitriansky kraj, Slovensko",
+        "description": "Vývoj potrubného aplikačného systému FLOWorX vrátane detekcie únikov. (C++, Qt)",
+        "skills": ["C++", "Qt"]
+      }
+    ],
+    "skillCategories": [
+      {
+        "name": "Frontend vývoj",
+        "items": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Zustand",
+          "React Query",
+          "Shadcn/UI",
+          "Responzívny dizajn"
+        ]
+      },
+      {
+        "name": "Backend vývoj",
+        "items": [
+          "Node.js",
+          "tRPC",
+          "PostgreSQL",
+          "Drizzle ORM",
+          "NextAuth.js",
+          "Návrh API",
+          "Firebase",
+          "Serverless"
+        ]
+      },
+      {
+        "name": "DevOps & nástroje",
+        "items": [
+          "Git",
+          "Docker",
+          "Turborepo",
+          "CI/CD",
+          "Vercel",
+          "AWS",
+          "Kubernetes",
+          "Monorepo"
+        ]
+      },
+      {
+        "name": "Ďalšie zručnosti",
+        "items": [
+          "Agile",
+          "UI/UX dizajn",
+          "Optimalizácia výkonu",
+          "Internationalization",
+          "Prístupnosť",
+          "Testovanie",
+          "Integrácia Stripe",
+          "Integrácia AI"
+        ]
+      }
+    ],
+    "projectSummaries": [
+      {
+        "title": "SplitWallet",
+        "description": "Sofistikovaná aplikácia na zdieľanie výdavkov, navrhnutá na pomoc používateľom sledovať, spravovať a deliť výdavky v skupinách.",
+        "link": "https://splitwallet.nexelon.sk/",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "tRPC",
+          "PostgreSQL",
+          "Drizzle ORM",
+          "Zustand",
+          "Tailwind CSS"
+        ]
+      }
     ]
   }
 }
