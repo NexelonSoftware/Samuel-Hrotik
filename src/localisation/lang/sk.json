@@ -117,6 +117,10 @@
       "Vývoj aplikácií"
     ]
   },
+  "cv": {
+    "keySkills": "Kľúčové zručnosti:",
+    "technologies": "Technológie:"
+  },
   "profile": {
     "personalInfo": {
       "name": "Samuel Hrotik",

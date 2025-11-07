@@ -26,6 +26,8 @@ type CVPageClientProps = {
   skillCategories: SkillCategory[];
   projectSummaries: ProjectSummary[];
   downloadPdfLabel: string;
+  keySkillsLabel: string;
+  technologiesLabel: string;
 };
 
 export function CVPageClient(props: CVPageClientProps) {
@@ -43,6 +45,8 @@ export function CVPageClient(props: CVPageClientProps) {
     skillCategories,
     projectSummaries,
     downloadPdfLabel,
+    keySkillsLabel,
+    technologiesLabel,
   } = props;
 
   const handlePrint = useCallback(() => {
@@ -199,7 +203,7 @@ export function CVPageClient(props: CVPageClientProps) {
                       {experience.skills?.length ? (
                         <p className="text-muted-foreground text-sm print:text-black">
                           <span className="text-foreground font-semibold print:text-black">
-                            Key skills:
+                            {keySkillsLabel}
                           </span>{" "}
                           {experience.skills.join(", ")}
                         </p>
@@ -236,7 +240,7 @@ export function CVPageClient(props: CVPageClientProps) {
                       </p>
                       <p className="text-muted-foreground text-sm print:text-black">
                         <span className="text-foreground font-semibold print:text-black">
-                          Technologies:
+                          {technologiesLabel}
                         </span>{" "}
                         {project.technologies.join(", ")}
                       </p>

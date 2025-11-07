@@ -116,6 +116,10 @@
       "Software Engineer"
     ]
   },
+  "cv": {
+    "keySkills": "Key skills:",
+    "technologies": "Technologies:"
+  },
   "profile": {
     "personalInfo": {
       "name": "Samuel Hrotik",

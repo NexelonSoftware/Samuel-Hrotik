@@ -16,6 +16,10 @@ export default async function CVPage({
   const { lang } = await params;
   const langData = await getLanguage(lang);
   const profile = langData.profile as ProfileContent;
+  const cvLabels = (langData.cv ?? {}) as {
+    keySkills?: unknown;
+    technologies?: unknown;
+  };
 
   return (
     <CVPageClient
@@ -41,6 +45,11 @@ export default async function CVPage({
       downloadPdfLabel={toStringOrFallback(
         langData.buttons.downloadPdf,
         "Download PDF",
+      )}
+      keySkillsLabel={toStringOrFallback(cvLabels.keySkills, "Key skills:")}
+      technologiesLabel={toStringOrFallback(
+        cvLabels.technologies,
+        "Technologies:",
       )}
     />
   );
