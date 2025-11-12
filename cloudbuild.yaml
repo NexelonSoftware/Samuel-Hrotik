@@ -43,15 +43,15 @@ options:
   substitutionOption: ALLOW_LOOSE
   logging: CLOUD_LOGGING_ONLY
 substitutions:
-  _AR_HOSTNAME: europe-west1-docker.pkg.dev
-  _AR_REPOSITORY: cloud-run-source-deploy
-  _TRIGGER_ID: 8a6755b1-9288-4c2c-a842-a006348b62fa
-  _AR_PROJECT_ID: samuelhrotikpage
+  _AR_PROJECT_ID: nexelon-469619
   _PLATFORM: managed
-  _SERVICE_NAME: samuelhrotik
-  REPO_NAME: samuelhrotik
+  _SERVICE_NAME: samuel-hrotik
+  REPO_NAME: samuel-hrotik
   _DEPLOY_REGION: europe-west1
+  _AR_HOSTNAME: europe-west1-docker.pkg.dev
+  _TRIGGER_ID: d45f96ec-8d6e-45db-a2b0-67a531f6cacb
+  _AR_REPOSITORY: cloud-run-source-deploy
 tags:
   - gcp-cloud-build-deploy-cloud-run
   - gcp-cloud-build-deploy-cloud-run-managed
-  - samuelhrotik
+  - samuel-hrotik
