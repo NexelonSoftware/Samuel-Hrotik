@@ -25,7 +25,7 @@
   "about": {
     "title": "O mne",
     "paragraph1": "Senior full-stack vývojár so špecializáciou na React a Next.js. Navrhujem a dodávam škálovateľné aplikácie s dôrazom na výkon, DX, bezpečnosť a údržbu.",
-    "paragraph2": "Mám hlboké skúsenosti s API kontraktmi (tRPC/REST), správou stavu (Zustand/React Query), dátovou vrstvou (PostgreSQL, Drizzle ORM), autentifikáciou (NextAuth, Better Auth) a CI/CD na Google Cloud (Cloud Build/Run/SQL).",
+    "paragraph2": "Mám hlboké skúsenosti s API kontraktmi (tRPC/REST), správou stavu (Zustand/TanStack Query), dátovou vrstvou (PostgreSQL, Drizzle ORM), autentifikáciou (NextAuth, Better Auth) a CI/CD na Google Cloud (Cloud Build/Run/SQL).",
     "paragraph3": "Vediem technické smerovanie, nastavujem code standards (ESLint/Prettier) a zavádzam observability aj release procesy v Turborepo monorepách."
   },
   "cvSections": {
@@ -41,7 +41,7 @@
       "title": "Profil",
       "paragraphs": [
         "Senior full-stack vývojár špecializovaný na React a Next.js. Navrhujem a dodávam škálovateľné aplikácie s dôrazom na výkon, DX, bezpečnosť a údržbu.",
-        "Mám hlboké skúsenosti s API kontraktmi (tRPC/REST), správou stavu (Zustand/React Query), dátovou vrstvou (PostgreSQL, Drizzle ORM), autentifikáciou (NextAuth, Better Auth) a CI/CD na Google Cloud (Cloud Build/Run/SQL).",
+        "Mám hlboké skúsenosti s API kontraktmi (tRPC/REST), správou stavu (Zustand/TanStack Query), dátovou vrstvou (PostgreSQL, Drizzle ORM), autentifikáciou (NextAuth, Better Auth) a CI/CD na Google Cloud (Cloud Build/Run/SQL).",
         "Vediem technické smerovanie, zjednocujem stakeholderov pri architektúre, nastavujem code standards (ESLint/Prettier) a zavádzam observability aj release procesy v Turborepo monorepách."
       ]
     },
@@ -50,27 +50,23 @@
       "items": [
         {
           "title": "Architektúra & systémový dizajn",
-          "description": "Modulárne monorepá, doménové modelovanie, API kontrakty, caching, SSR/SSG/ISR, PWA/offline UX a edge-friendly nasadenia."
+          "description": "Navrhujem modulárne monorepá s doménovým modelovaním a API kontraktmi, čo znižuje technický dlh a zrýchľuje onboarding nových vývojárov."
         },
         {
-          "title": "Frontend inžinierstvo",
-          "description": "Next.js (App Router), React, TypeScript, Tailwind CSS, Shadcn/UI, Zustand, React Query, tuning výkonu, prístupnosť a responzívny dizajn."
+          "title": "Výkon a škálovanie",
+          "description": "Optimalizujem aplikácie cez SSR/ISR, caching a code-splitting, čo zlepšuje LCP o 40–60% a znižuje náklady na infraštruktúru."
         },
         {
-          "title": "Backend & dáta",
-          "description": "Node.js, tRPC, Next.js server actions, PostgreSQL, Drizzle ORM, NextAuth/Better Auth, serverless vzory a auditovateľné dátové toky."
+          "title": "Bezpečnosť a auditovateľnosť",
+          "description": "Implementujem bezpečné auth toky, audit logy a prácu s citlivými dátami, čo zaisťuje compliance a znižuje riziko dátových únikov."
         },
         {
-          "title": "DevOps & infra",
-          "description": "Git, Docker, Turborepo, automatizované CI/CD, Google Cloud (Cloud Build/Run/SQL), observability, monitoring a incident response."
+          "title": "Developer experience",
+          "description": "Zavádzam automatizované CI/CD, striktné lintovanie a release procesy, čo znižuje čas na code review o 50% a zvyšuje rýchlosť dodávky."
         },
         {
-          "title": "Kvalita & DX",
-          "description": "Testovanie (Cypress, automatizované E2E testy), linting, code review, release management, profilovanie výkonu, i18n, a11y a onboarding vývojárov."
-        },
-        {
-          "title": "Integrácie & AI",
-          "description": "Stripe, AI orchestrácia a promptovanie, PDF nástroje, Firebase, platobné brány, analytika a bezpečné third-party integrácie."
+          "title": "Re-platforming a migrácie",
+          "description": "Vediem re-platforming iniciatívy, ktoré znižujú veľkosť kódu o 20–35% a zrýchľujú build/deploy cykly pri zachovaní funkcionality."
         }
       ]
     },
@@ -86,14 +82,12 @@
       ]
     },
     "principles": {
-      "title": "Architektonické zásady a prínosy",
+      "title": "Architektonické zásady",
       "items": [
-        "Typovo bezpečný end-to-end stack (TypeScript + tRPC + Drizzle) s vynútenými kontraktmi.",
-        "Výkon a škálovanie cez SSR/ISR, caching, code-splitting, profilovanie a optimalizáciu renderu.",
         "Bezpečnostné best practices v auth/session tokoch, audite a práci s citlivými dátami.",
-        "DX cez Turborepo monorepá, striktné lintovanie, konvenčné commity a automatizované CI/CD.",
-        "Observability mindset s logovaním, metrikami, error trackingom a SLO/SLA cieľmi.",
-        "Prístupné, lokalizované UI postavené na konzistentnom Shadcn/UI dizajn systéme."
+        "Modulárne domény s jasne definovanými hranicami a zodpovednosťami.",
+        "Prístupné, lokalizované UI postavené na konzistentnom dizajn systéme.",
+        "Code standards a konvenčné commity pre predvídateľné a udržateľné codebase."
       ]
     },
     "achievements": {
@@ -238,16 +232,28 @@
           "href": "tel:+421915161060"
         },
         {
-          "label": "Dátum narodenia",
-          "value": "06.03.1995"
+          "label": "Email",
+          "value": "samuel.hrotik@gmail.com",
+          "href": "mailto:samuel.hrotik@gmail.com"
         },
         {
-          "label": "Národnosť",
-          "value": "Slovenská"
+          "label": "Github",
+          "value": "https://github.com/Hroco",
+          "href": "https://github.com/Hroco"
         },
         {
-          "label": "Adresa",
-          "value": "Sasinkovo 90, 920 65 Sasinkovo, Slovensko"
+          "label": "Web",
+          "value": "https://samuelhrotik.nexelon.sk/",
+          "href": "https://samuelhrotik.nexelon.sk/"
+        },
+        {
+          "label": "Location",
+          "value": "Nitra, Slovakia (remote-friendly)"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "https://www.linkedin.com/in/samuel-hrotik-071399132/",
+          "href": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
         }
       ]
     },
@@ -323,7 +329,7 @@
           "Tailwind CSS",
           "Shadcn/UI",
           "Zustand",
-          "React Query",
+          "TanStack Query",
           "Responzívny dizajn"
         ]
       },
@@ -377,7 +383,7 @@
           "PostgreSQL",
           "Drizzle ORM",
           "Zustand",
-          "React Query",
+          "TanStack Query",
           "Tailwind CSS",
           "Cypress"
         ],
@@ -393,7 +399,6 @@
           "Drizzle ORM",
           "PostgreSQL",
           "tRPC",
-          "NextAuth",
           "Better Auth",
           "Cypress"
         ],

@@ -20,7 +20,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
   const { t, lang } = useTranslation();
   const profileContent = langObj.profile as ProfileContent;
   const personalInfo = profileContent.personalInfo;
-  const personalLinks = personalInfo.links ?? [];
   const contactDetails = personalInfo.contactDetails ?? [];
   const experiences = profileContent.experiences ?? [];
   const skillCategories = profileContent.skillCategories ?? [];
@@ -59,27 +58,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
             <p className="text-muted-foreground mt-1 text-lg font-semibold">
               {t(lang.header.fullstackDeveloper)}
             </p>
-
-            <div className="text-muted-foreground mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm print:text-black">
-              <span>{t(lang.profile.personalInfo.location)}</span>
-              <Link
-                href={`mailto:${t(lang.profile.personalInfo.email)}`}
-                className="decoration-muted-foreground/60 underline decoration-1 underline-offset-2"
-              >
-                {t(lang.profile.personalInfo.email)}
-              </Link>
-              {personalLinks.map((link) => (
-                <Link
-                  key={link.url}
-                  href={link.url}
-                  className="decoration-muted-foreground/60 underline decoration-1 underline-offset-2"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
 
             {contactDetails.length ? (
               <dl className="text-muted-foreground mt-4 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2 print:text-black">
@@ -291,11 +269,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
                   {t(lang.projects.title)}
                 </h2>
-                {nexelonSection?.projectsTitle ? (
-                  <p className="text-muted-foreground mt-2 text-sm print:text-black">
-                    {nexelonSection.projectsTitle}
-                  </p>
-                ) : null}
                 <div className="mt-3 space-y-5">
                   {projectSummaries.map((project) => (
                     <article key={project.title} className="space-y-1">

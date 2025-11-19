@@ -25,7 +25,7 @@
   "about": {
     "title": "About Me",
     "paragraph1": "Senior full-stack engineer and software architect specializing in React and Next.js. I design and ship scalable applications with a focus on performance, developer experience, security, and maintainability.",
-    "paragraph2": "I have deep experience with API contracts (tRPC/REST), state management (Zustand/React Query), data layers (PostgreSQL, Drizzle ORM), authentication (NextAuth, Better Auth), and CI/CD on Google Cloud (Cloud Build/Run/SQL).",
+    "paragraph2": "I have deep experience with API contracts (tRPC/REST), state management (Zustand/TanStack Query), data layers (PostgreSQL, Drizzle ORM), authentication (NextAuth, Better Auth), and CI/CD on Google Cloud (Cloud Build/Run/SQL).",
     "paragraph3": "I lead technical direction, set code standards (ESLint/Prettier), and implement observability plus release processes in Turborepo monorepos."
   },
   "cvSections": {
@@ -41,7 +41,7 @@
       "title": "Profile",
       "paragraphs": [
         "Senior full-stack engineer focused on React and Next.js, delivering scalable applications with performance, DX, security, and maintainability in mind.",
-        "Deep experience with API contracts (tRPC/REST), state management (Zustand/React Query), data layers (PostgreSQL, Drizzle ORM), authentication (NextAuth, Better Auth), and CI/CD automations on Google Cloud (Cloud Build/Run/SQL).",
+        "Deep experience with API contracts (tRPC/REST), state management (Zustand/TanStack Query), data layers (PostgreSQL, Drizzle ORM), authentication (NextAuth, Better Auth), and CI/CD automations on Google Cloud (Cloud Build/Run/SQL).",
         "I lead technical direction, align stakeholders on architecture, set code standards (ESLint/Prettier), and build observability plus release processes in Turborepo monorepos."
       ]
     },
@@ -50,27 +50,23 @@
       "items": [
         {
           "title": "Architecture & System Design",
-          "description": "Modular monorepos, domain modeling, API contracts, caching, SSR/SSG/ISR, PWA/offline UX, and edge-friendly deployments."
+          "description": "Designing modular monorepos with domain modeling and API contracts, reducing technical debt and accelerating developer onboarding."
         },
         {
-          "title": "Frontend Engineering",
-          "description": "Next.js (App Router), React, TypeScript, Tailwind CSS, Shadcn/UI, Zustand, React Query, performance tuning, accessibility, and responsive design."
+          "title": "Performance & Scaling",
+          "description": "Optimizing applications via SSR/ISR, caching, and code-splitting, improving LCP by 40–60% and reducing infrastructure costs."
         },
         {
-          "title": "Backend & Data",
-          "description": "Node.js, tRPC, Next.js server actions, PostgreSQL, Drizzle ORM, NextAuth/Better Auth, serverless patterns, and auditable data flows."
+          "title": "Security & Auditability",
+          "description": "Implementing secure auth flows, audit logs, and sensitive data handling, ensuring compliance and reducing data breach risk."
         },
         {
-          "title": "DevOps & Infrastructure",
-          "description": "Git, Docker, Turborepo, automated CI/CD, Google Cloud (Cloud Build/Run/SQL), observability, monitoring, and incident response."
+          "title": "Developer Experience",
+          "description": "Establishing automated CI/CD, strict linting, and release processes, cutting code review time by 50% and increasing delivery speed."
         },
         {
-          "title": "Quality & DX",
-          "description": "Testing (Cypress, automated E2E tests), linting, code review, release management, performance profiling, i18n, a11y, and developer onboarding."
-        },
-        {
-          "title": "Integrations & AI",
-          "description": "Stripe, AI orchestration and prompting, PDF tooling, Firebase, payment gateways, analytics, and secure third-party integrations."
+          "title": "Re-platforming & Migrations",
+          "description": "Leading re-platforming initiatives that reduce codebase size by 20–35% and accelerate build/deploy cycles while maintaining functionality."
         }
       ]
     },
@@ -86,14 +82,12 @@
       ]
     },
     "principles": {
-      "title": "Architecture Principles & Benefits",
+      "title": "Architecture Principles",
       "items": [
-        "Type-safe end-to-end stack (TypeScript + tRPC + Drizzle) with enforced contracts.",
-        "Performance and scale via SSR/ISR, caching, code-splitting, profiling, and render optimizations.",
         "Security best practices in auth/session flows, auditing, and handling sensitive data.",
-        "DX through Turborepo monorepos, strict linting, conventional commits, and automated CI/CD.",
-        "Observability mindset with logging, metrics, error tracking, and SLO/SLA targets.",
-        "Accessible, localized UI built on a consistent Shadcn/UI design system."
+        "Modular domains with clearly defined boundaries and responsibilities.",
+        "Accessible, localized UI built on a consistent design system.",
+        "Code standards and conventional commits for predictable and maintainable codebase."
       ]
     },
     "achievements": {
@@ -238,16 +232,28 @@
           "href": "tel:+421915161060"
         },
         {
-          "label": "Date of Birth",
-          "value": "06/03/1995"
+          "label": "Email",
+          "value": "samuel.hrotik@gmail.com",
+          "href": "mailto:samuel.hrotik@gmail.com"
         },
         {
-          "label": "Nationality",
-          "value": "Slovak"
+          "label": "Github",
+          "value": "https://github.com/Hroco",
+          "href": "https://github.com/Hroco"
         },
         {
-          "label": "Address",
-          "value": "Sasinkovo 90, 920 65 Sasinkovo, Slovakia"
+          "label": "Web",
+          "value": "https://samuelhrotik.nexelon.sk/",
+          "href": "https://samuelhrotik.nexelon.sk/"
+        },
+        {
+          "label": "Location",
+          "value": "Nitra, Slovakia (remote-friendly)"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "https://www.linkedin.com/in/samuel-hrotik-071399132/",
+          "href": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
         }
       ]
     },
@@ -323,7 +329,7 @@
           "Tailwind CSS",
           "Shadcn/UI",
           "Zustand",
-          "React Query",
+          "TanStack Query",
           "Responsive Design"
         ]
       },
@@ -377,7 +383,7 @@
           "PostgreSQL",
           "Drizzle ORM",
           "Zustand",
-          "React Query",
+          "TanStack Query",
           "Tailwind CSS",
           "Cypress"
         ],
@@ -393,7 +399,6 @@
           "Drizzle ORM",
           "PostgreSQL",
           "tRPC",
-          "NextAuth",
           "Better Auth",
           "Cypress"
         ],

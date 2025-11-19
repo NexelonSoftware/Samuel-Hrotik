@@ -68,10 +68,6 @@ export const langMaps = {
         "4": {
           "title": "cvSections.competencies.items.4.title",
           "description": "cvSections.competencies.items.4.description"
-        },
-        "5": {
-          "title": "cvSections.competencies.items.5.title",
-          "description": "cvSections.competencies.items.5.description"
         }
       }
     },
@@ -92,9 +88,7 @@ export const langMaps = {
         "0": "cvSections.principles.items.0",
         "1": "cvSections.principles.items.1",
         "2": "cvSections.principles.items.2",
-        "3": "cvSections.principles.items.3",
-        "4": "cvSections.principles.items.4",
-        "5": "cvSections.principles.items.5"
+        "3": "cvSections.principles.items.3"
       }
     },
     "achievements": {
@@ -240,15 +234,27 @@ export const langMaps = {
         },
         "1": {
           "label": "profile.personalInfo.contactDetails.1.label",
-          "value": "profile.personalInfo.contactDetails.1.value"
+          "value": "profile.personalInfo.contactDetails.1.value",
+          "href": "profile.personalInfo.contactDetails.1.href"
         },
         "2": {
           "label": "profile.personalInfo.contactDetails.2.label",
-          "value": "profile.personalInfo.contactDetails.2.value"
+          "value": "profile.personalInfo.contactDetails.2.value",
+          "href": "profile.personalInfo.contactDetails.2.href"
         },
         "3": {
           "label": "profile.personalInfo.contactDetails.3.label",
-          "value": "profile.personalInfo.contactDetails.3.value"
+          "value": "profile.personalInfo.contactDetails.3.value",
+          "href": "profile.personalInfo.contactDetails.3.href"
+        },
+        "4": {
+          "label": "profile.personalInfo.contactDetails.4.label",
+          "value": "profile.personalInfo.contactDetails.4.value"
+        },
+        "5": {
+          "label": "profile.personalInfo.contactDetails.5.label",
+          "value": "profile.personalInfo.contactDetails.5.value",
+          "href": "profile.personalInfo.contactDetails.5.href"
         }
       }
     },
@@ -380,7 +386,8 @@ export const langMaps = {
           "4": "profile.skillCategories.3.items.4",
           "5": "profile.skillCategories.3.items.5",
           "6": "profile.skillCategories.3.items.6",
-          "7": "profile.skillCategories.3.items.7"
+          "7": "profile.skillCategories.3.items.7",
+          "8": "profile.skillCategories.3.items.8"
         }
       }
     },
@@ -396,7 +403,8 @@ export const langMaps = {
           "3": "profile.projectSummaries.0.technologies.3",
           "4": "profile.projectSummaries.0.technologies.4",
           "5": "profile.projectSummaries.0.technologies.5",
-          "6": "profile.projectSummaries.0.technologies.6"
+          "6": "profile.projectSummaries.0.technologies.6",
+          "7": "profile.projectSummaries.0.technologies.7"
         },
         "impact": "profile.projectSummaries.0.impact"
       },
