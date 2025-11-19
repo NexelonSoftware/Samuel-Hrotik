@@ -32,7 +32,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
   const principleItems = cvSections?.principles?.items ?? [];
   const achievementItems = cvSections?.achievements?.items ?? [];
   const languageItems = cvSections?.languages?.items ?? [];
-  const noteItems = cvSections?.notes?.items ?? [];
   const nexelonSection = cvSections?.nexelon;
 
   const handlePrint = useCallback(() => {
@@ -231,19 +230,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                         </span>{" "}
                         · {item.level}
                       </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-
-              {noteItems.length ? (
-                <div>
-                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
-                    {langObj.cvSections?.notes?.title}
-                  </h2>
-                  <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
-                    {noteItems.map((item) => (
-                      <li key={item}>{item}</li>
                     ))}
                   </ul>
                 </div>

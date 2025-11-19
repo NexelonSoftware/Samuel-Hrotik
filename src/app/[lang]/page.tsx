@@ -34,7 +34,6 @@ export default async function Home({
   const projectSummaries = profile.projectSummaries ?? [];
   const featuredProject = projectSummaries[0];
   const additionalProjects = projectSummaries.slice(1);
-  const profileHighlights = langObj.cvSections?.profile?.paragraphs ?? [];
   const competencyItems = langObj.cvSections?.competencies?.items ?? [];
   const nexelon = langObj.cvSections?.nexelon;
   const principles = langObj.cvSections?.principles?.items ?? [];
@@ -457,10 +456,7 @@ export default async function Home({
           </div>
         </section>
 
-        {(principles.length ||
-          achievements.length ||
-          languageItems.length ||
-          noteItems.length) && (
+        {(principles.length || achievements.length || languageItems.length) && (
           <section
             id="principles"
             className="container mx-auto border-t px-2 py-24 sm:py-32"
