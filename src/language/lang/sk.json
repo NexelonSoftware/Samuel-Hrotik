@@ -19,35 +19,125 @@
     "sending": "Odosielanie..."
   },
   "header": {
-    "fullstackDeveloper": "Fullstack vývojár",
-    "specialization": "Špecializácia na Next.js & React",
-    "buildingModern": "Vyvíjam moderné webové a mobilné aplikácie s najnovšími technológiami"
+    "fullstackDeveloper": "Senior Full-Stack inžinier",
+    "buildingModern": "Navrhujem škálovateľné, bezpečné a vysokovýkonné platformy pre web a cloud"
   },
   "about": {
     "title": "O mne",
-    "paragraph1": "Som zanietený fullstack vývojár so skúsenosťami vo vývoji moderných webových a mobilných aplikácií. So silným základom v Next.js, React a TypeScript vytváram škálovateľné, výkonné a používateľsky prívetivé aplikácie.",
-    "paragraph2": "Moje skúsenosti siahajú cez celý vývojový stack, od návrhu intuitívnych používateľských rozhraní až po implementáciu robustných backendových systémov a databázových architektúr. Obzvlášť sa špecializujem na vývoj komplexných aplikácií so sofistikovaným manažmentom stavu a synchronizačnými systémami.",
-    "paragraph3": "Vždy rád prijímam náročné projekty, ktoré posúvajú hranice možností moderných webových technológií."
+    "paragraph1": "Senior full-stack vývojár so špecializáciou na React a Next.js. Navrhujem a dodávam škálovateľné aplikácie s dôrazom na výkon, DX, bezpečnosť a údržbu.",
+    "paragraph2": "Mám hlboké skúsenosti s API kontraktmi (tRPC/REST), správou stavu (Zustand/React Query), dátovou vrstvou (PostgreSQL, Drizzle ORM), autentifikáciou (NextAuth, Better Auth) a CI/CD na Google Cloud (Cloud Build/Run/SQL).",
+    "paragraph3": "Vediem technické smerovanie, nastavujem code standards (ESLint/Prettier) a zavádzam observability aj release procesy v Turborepo monorepách."
+  },
+  "cvSections": {
+    "status": {
+      "title": "Profily a status",
+      "items": [
+        "Senior Full-Stack Engineer zameraný na React & Next.js",
+        "6+ rokov webového vývoja, 5+ rokov vedenia škálovateľnej architektúry a produktu",
+        "Zakladateľ a lead engineer v Nexelon s.r.o."
+      ]
+    },
+    "profile": {
+      "title": "Profil",
+      "paragraphs": [
+        "Senior full-stack vývojár špecializovaný na React a Next.js. Navrhujem a dodávam škálovateľné aplikácie s dôrazom na výkon, DX, bezpečnosť a údržbu.",
+        "Mám hlboké skúsenosti s API kontraktmi (tRPC/REST), správou stavu (Zustand/React Query), dátovou vrstvou (PostgreSQL, Drizzle ORM), autentifikáciou (NextAuth, Better Auth) a CI/CD na Google Cloud (Cloud Build/Run/SQL).",
+        "Vediem technické smerovanie, zjednocujem stakeholderov pri architektúre, nastavujem code standards (ESLint/Prettier) a zavádzam observability aj release procesy v Turborepo monorepách."
+      ]
+    },
+    "competencies": {
+      "title": "Kľúčové kompetencie",
+      "items": [
+        {
+          "title": "Architektúra & systémový dizajn",
+          "description": "Modulárne monorepá, doménové modelovanie, API kontrakty, caching, SSR/SSG/ISR, PWA/offline UX a edge-friendly nasadenia."
+        },
+        {
+          "title": "Frontend inžinierstvo",
+          "description": "Next.js (App Router), React, TypeScript, Tailwind CSS, Shadcn/UI, Zustand, React Query, tuning výkonu, prístupnosť a responzívny dizajn."
+        },
+        {
+          "title": "Backend & dáta",
+          "description": "Node.js, tRPC, Next.js server actions, PostgreSQL, Drizzle ORM, NextAuth/Better Auth, serverless vzory a auditovateľné dátové toky."
+        },
+        {
+          "title": "DevOps & infra",
+          "description": "Git, Docker, Turborepo, automatizované CI/CD, Google Cloud (Cloud Build/Run/SQL), observability, monitoring a incident response."
+        },
+        {
+          "title": "Kvalita & DX",
+          "description": "Testovanie, linting, code review, release management, profilovanie výkonu, i18n, a11y a onboarding vývojárov."
+        },
+        {
+          "title": "Integrácie & AI",
+          "description": "Stripe, AI orchestrácia a promptovanie, PDF nástroje, Firebase, platobné brány, analytika a bezpečné third-party integrácie."
+        }
+      ]
+    },
+    "nexelon": {
+      "title": "Nexelon s.r.o. – zakladateľ & lead engineer",
+      "intro": "Tech lead, architekt a full-stack vývojár dodávajúci na mieru vrátane infraštruktúry, bezpečnosti a SLA.",
+      "responsibilitiesTitle": "Zodpovednosti",
+      "projectsTitle": "Vybrané projekty",
+      "responsibilities": [
+        "Definícia architektúry, domén a delivery plánov pre greenfield aj re-platform iniciatívy.",
+        "Vedenie komunikácie s klientmi, prioritizácia roadmapy a spoločné code standards naprieč tímami.",
+        "Prevádzka CI/CD na Google Cloud s automatickým testovaním, observability a release guardrails."
+      ]
+    },
+    "principles": {
+      "title": "Architektonické zásady a prínosy",
+      "items": [
+        "Typovo bezpečný end-to-end stack (TypeScript + tRPC + Drizzle) s vynútenými kontraktmi.",
+        "Výkon a škálovanie cez SSR/ISR, caching, code-splitting, profilovanie a optimalizáciu renderu.",
+        "Bezpečnostné best practices v auth/session tokoch, audite a práci s citlivými dátami.",
+        "DX cez Turborepo monorepá, striktné lintovanie, konvenčné commity a automatizované CI/CD.",
+        "Observability mindset s logovaním, metrikami, error trackingom a SLO/SLA cieľmi.",
+        "Prístupné, lokalizované UI postavené na konzistentnom Shadcn/UI dizajn systéme."
+      ]
+    },
+    "achievements": {
+      "title": "Vybrané úspechy",
+      "items": [
+        "Re-platformovanie viacerých produktov na Next.js so znížením kódu o 20–35 % a rýchlejším build/deploy cyklom.",
+        "Konzistentné monorepo setupy (Turborepo) a CI/CD pipeline na Google Cloud (Cloud Build + Cloud Run).",
+        "Návrh dátových modelov v Drizzle s bezpečnými migráciami/rollbackmi a automatizovanými release bránami.",
+        "Stabilný release proces s lintom, testami a preview deploymi pre každú zmenu."
+      ]
+    },
+    "languages": {
+      "title": "Jazyky",
+      "items": [
+        {
+          "name": "Slovenský",
+          "level": "Rodný jazyk"
+        },
+        {
+          "name": "Anglický",
+          "level": "B2 – profesionálna pracovná úroveň"
+        }
+      ]
+    }
   },
   "experience": {
     "title": "Pracovné skúsenosti"
   },
   "skills": {
-    "title": "Technické zručnosti",
+    "title": "Technologický stack",
     "frontend": "Frontend vývoj",
     "backend": "Backend vývoj",
-    "devops": "DevOps & nástroje",
-    "other": "Ďalšie zručnosti"
+    "devops": "Nástroje & infra",
+    "other": "Ďalšie technológie"
   },
   "projects": {
     "title": "Vybrané projekty",
     "splitwallet": {
       "title": "SplitWallet",
-      "description": "Sofistikovaná aplikácia na zdieľanie výdavkov, navrhnutá na pomoc používateľom sledovať, spravovať a deliť výdavky v skupinách."
+      "description": "Platforma na skupinové výdavky s real-time synchronizáciou, offline UX, PWA podporou a prémiovým modelom."
     },
     "warehouse": {
       "title": "Warehouse Assistant",
-      "description": "Moderný systém pre správu skladu so sledovaním zásob, riadením objednávok a analýzami v reálnom čase."
+      "description": "Moderná správa skladu so sledovaním zásob, objednávkami a analýzami v reálnom čase."
     },
     "invoice": {
       "title": "Invoice Generator",
@@ -59,28 +149,28 @@
     "title": "Prípadová štúdia SplitWallet",
     "overview": {
       "title": "Prehľad projektu",
-      "description": "SplitWallet je sofistikovaná aplikácia na zdieľanie výdavkov, navrhnutá na pomoc používateľom sledovať, spravovať a deliť výdavky v skupinách. Aplikácia umožňuje používateľom vytvárať peňaženky (skupiny výdavkov), pridávať výdavky, sledovať zostatky, generovať správy a efektívne vyrovnávať dlhy."
+      "description": "SplitWallet je sofistikovaná aplikácia na zdieľanie výdavkov, ktorá pomáha tímom sledovať, manažovať a vyrovnávať náklady. Umožňuje zakladať peňaženky, zachytávať výdavky, sledovať zostatky, generovať reporty a efektívne vyrovnávať dlhy."
     },
     "technical": {
       "title": "Technické highlights",
-      "item1": "Postavené ako monorepo pomocou Next.js, tRPC, PostgreSQL a Drizzle ORM",
-      "item2": "Implementovaný sofistikovaný systém synchronizácie stavu pre offline fungovanie",
-      "item3": "Integrované skenovanie účteniek pomocou Gemini 2.5 Pro s AI",
-      "item4": "Vyvinutý inteligentný algoritmus minimalizácie dlhov s viacerými režimami úhrad",
-      "item5": "Vytvorený komplexný dizajn systém s podporou svetlého a tmavého režimu"
+      "item1": "Monorepo postavené na Next.js, tRPC, PostgreSQL, Drizzle ORM a Turborepo.",
+      "item2": "Systém synchronizácie stavu s offline fungovaním, background revalidáciou a riešením konfliktov.",
+      "item3": "AI spracovanie účteniek pomocou Gemini 2.5 Pro a PDF export nástrojov.",
+      "item4": "Algoritmy minimalizácie dlhov s viacerými režimami úhrad a poistkami.",
+      "item5": "Kompletný dizajn systém s prístupnou svetlou/tmavou témou."
     },
     "features": {
       "title": "Kľúčové funkcie",
-      "item1": "Správa výdavkov s vlastným rozdelením medzi používateľov",
-      "item2": "Správa skupín s viacerými peňaženkami a hierarchickou organizáciou",
-      "item3": "Aktualizácie v reálnom čase a offline podpora so synchronizáciou dát",
-      "item4": "Podpora viacerých jazykov a konverzia mien",
-      "item5": "Prémiové funkcie s integráciou predplatného cez Stripe"
+      "item1": "Správa výdavkov s vlastnými modelmi rozdelenia na používateľa/skupinu.",
+      "item2": "Hierarchia peňaženiek s oprávneniami, pozvánkami a kontextovými insightmi.",
+      "item3": "Aktualizácie v reálnom čase, offline podpora a transparentné stavy synchronizácie.",
+      "item4": "Lokalizácia, multi-mena a automatické pripomienky.",
+      "item5": "Prémiové funkcie s integráciou Stripe predplatného."
     }
   },
   "contact": {
     "title": "Kontaktujte ma",
-    "description": "Som vždy otvorený diskusii o nových projektoch, kreatívnych nápadoch alebo príležitostiach byť súčasťou vašej vízie.",
+    "description": "Otvorený diskusii o nových produktoch, architektonických revíziách alebo leadershipe pri škálovaní tímov.",
     "form": {
       "name": "Meno",
       "namePlaceholder": "Vaše meno",
@@ -91,7 +181,7 @@
       "message": "Správa",
       "messagePlaceholder": "Vaša správa",
       "sent": "Správa odoslaná!",
-      "sentDescription": "Ďakujem za vašu správu. Čoskoro sa vám ozvem."
+      "sentDescription": "Ďakujem za správu. Čoskoro sa ozvem."
     }
   },
   "footer": {
@@ -104,28 +194,28 @@
     "system": "Systémová"
   },
   "metadata": {
-    "title": "Samuel Hrotik - Fullstack Developer",
-    "description": "Samuel Hrotik je zanietený fullstack vývojár so špecializáciou na Next.js a React, ktorý vyvíja moderné webové a mobilné aplikácie s najnovšími technológiami.",
+    "title": "Samuel Hrotik - Senior Full-Stack Engineer",
+    "description": "Samuel Hrotik je senior full-stack inžinier zameraný na React/Next.js, typovo bezpečné API a automatizáciu na Google Cloud.",
     "keywords": [
       "Samuel Hrotik",
       "Fullstack Developer",
       "Next.js",
       "React",
-      "Vývoj Web aplikácií",
-      "Mobilné aplikácie",
-      "Softvérový inžiniering",
-      "Vývoj aplikácií"
+      "Vývoj webu",
+      "Google Cloud",
+      "tRPC"
     ]
   },
   "cv": {
     "keySkills": "Kľúčové zručnosti:",
-    "technologies": "Technológie:"
+    "technologies": "Technológie:",
+    "impactLabel": "Dopad:"
   },
   "profile": {
     "personalInfo": {
       "name": "Samuel Hrotik",
-      "role": "Fullstack vývojár so špecializáciou na Next.js & React",
-      "location": "Nitra, Slovensko",
+      "role": "Senior Full-Stack Engineer",
+      "location": "Nitra, Slovensko (remote-friendly)",
       "email": "samuel.hrotik@gmail.com",
       "links": [
         {
@@ -137,160 +227,203 @@
           "url": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
         },
         {
-          "label": "Webstránka",
+          "label": "Web",
           "url": "https://samuelhrotik.nexelon.sk/"
         }
       ],
       "contactDetails": [
         {
+          "label": "Telefón",
+          "value": "+421 915 161 060",
+          "href": "tel:+421915161060"
+        },
+        {
           "label": "Dátum narodenia",
-          "value": "06/03/1995"
+          "value": "06.03.1995"
         },
         {
           "label": "Národnosť",
           "value": "Slovenská"
         },
         {
-          "label": "Telefón",
-          "value": "(+421) 915 161 060",
-          "href": "tel:+421915161060",
-          "note": "(Mobil)"
-        },
-        {
-          "label": "Emailová adresa",
-          "value": "samuel.hrotik@gmail.com",
-          "href": "mailto:samuel.hrotik@gmail.com"
-        },
-        {
-          "label": "LinkedIn",
-          "value": "www.linkedin.com/in/samuel-hrotik-071399132",
-          "href": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
-        },
-        {
-          "label": "WhatsApp Messenger",
-          "value": "+421 915 161 060",
-          "href": "https://wa.me/421915161060"
-        },
-        {
           "label": "Adresa",
-          "value": "Sasinkovo 90, 92065 Sasinkovo, Slovensko",
-          "note": "(Domov)"
+          "value": "Sasinkovo 90, 920 65 Sasinkovo, Slovensko"
         }
       ]
     },
     "experiences": [
       {
         "company": "Foxit",
-        "position": "Development Engineer a PDF špecialista",
-        "period": "jan 2025 - súčasnosť · 5 mes.",
-        "location": "Slovensko · na diaľku",
-        "skills": ["PDF", "Next.js", "C++", "Web Development"]
-      },
-      {
-        "company": "Foxit",
-        "position": "Softvérový inžinier",
-        "period": "okt 2023 - jan 2025 · 1 rok 4 mes.",
-        "location": "Slovensko · na diaľku",
+        "position": "Development Engineer & PDF špecialista",
+        "period": "01/2025 – súčasnosť",
+        "location": "Slovensko · Remote",
+        "description": "Vedie Tagged PDF School (PDF Association) na Next.js + tRPC v Google Cloud, integruje C++ validačné enginy a stavia CI/CD s monitoringom pre kritickú PDF edukačnú platformu.",
         "skills": [
-          "Git",
-          "English",
-          "Cross-platform Development",
-          "JavaScript",
-          "ESLint",
-          "React.js",
-          "Cloud Applications"
+          "Next.js",
+          "tRPC",
+          "Google Cloud",
+          "PDF SDK",
+          "C++",
+          "Observability"
         ]
       },
       {
         "company": "Foxit",
+        "position": "Softvérový inžinier",
+        "period": "10/2023 – 01/2025",
+        "location": "Slovensko · Remote",
+        "description": "Dodával webové a cloudové komponenty, automatizoval kvalitu, zaviedol ESLint/Prettier štandardy a posilnil CI kroky naprieč tímami.",
+        "skills": ["React", "TypeScript", "Git", "ESLint", "Cloud Applications"]
+      },
+      {
+        "company": "Foxit",
         "position": "Junior softvérový inžinier",
-        "period": "júl 2022 - okt 2023 · 1 rok 4 mes.",
-        "location": "Slovensko · na diaľku",
-        "skills": ["C++", "Python"]
+        "period": "07/2022 – 10/2023",
+        "location": "Slovensko · Remote",
+        "description": "Budoval C++/Python nástroje, integračné moduly a cross-platform buildy pre PDF workflow.",
+        "skills": ["C++", "Python", "Cross-platform builds"]
       },
       {
         "company": "Foxit",
         "position": "Quality Assurance Engineer",
-        "period": "nov 2020 - júl 2022 · 1 rok 9 mes.",
-        "location": "Slovensko · na diaľku"
+        "period": "11/2020 – 07/2022",
+        "location": "Slovensko · Remote",
+        "description": "Zodpovedal za testovaciu stratégiu, automatizácie, scenáre a reporting naprieč PDF produktmi.",
+        "skills": ["QA Automation", "Test Strategy", "Reporting"]
+      },
+      {
+        "company": "Nexelon s.r.o.",
+        "position": "Zakladateľ & lead engineer",
+        "period": "2020 – súčasnosť",
+        "location": "Slovensko · Remote",
+        "description": "Tech lead pre projekty na mieru – architektúra, full-stack delivery, komunikácia s klientom, infra, bezpečnosť a SLA.",
+        "skills": [
+          "Tech leadership",
+          "Architecture",
+          "Client delivery",
+          "CI/CD"
+        ]
       },
       {
         "company": "HIMA",
         "position": "Vývojár",
-        "period": "jún 2020 - sep 2020 · 4 mes.",
+        "period": "06/2020 – 09/2020",
         "location": "Nitriansky kraj, Slovensko",
-        "description": "Vývoj potrubného aplikačného systému FLOWorX vrátane detekcie únikov. (C++, Qt)",
-        "skills": ["C++", "Qt"]
+        "description": "Vývoj FLOWorX potrubného systému s detekciou únikov v C++/Qt a modulárnymi rozšíreniami.",
+        "skills": ["C++", "Qt", "Systems design"]
       }
     ],
     "skillCategories": [
       {
-        "name": "Frontend vývoj",
+        "name": "Frontend",
         "items": [
           "Next.js",
           "React",
           "TypeScript",
           "Tailwind CSS",
+          "Shadcn/UI",
           "Zustand",
           "React Query",
-          "Shadcn/UI",
           "Responzívny dizajn"
         ]
       },
       {
-        "name": "Backend vývoj",
+        "name": "Backend",
         "items": [
           "Node.js",
           "tRPC",
           "PostgreSQL",
           "Drizzle ORM",
           "NextAuth.js",
-          "Návrh API",
-          "Firebase",
-          "Serverless"
+          "Better Auth",
+          "Serverless",
+          "Návrh API"
         ]
       },
       {
-        "name": "DevOps & nástroje",
+        "name": "Nástroje & infra",
         "items": [
           "Git",
           "Docker",
           "Turborepo",
+          "Google Cloud (Cloud Run/Build/SQL)",
           "CI/CD",
-          "Vercel",
-          "AWS",
-          "Kubernetes",
           "Monorepo"
         ]
       },
       {
-        "name": "Ďalšie zručnosti",
+        "name": "Ďalšie technológie",
         "items": [
-          "Agile",
-          "UI/UX dizajn",
-          "Optimalizácia výkonu",
-          "Internationalization",
-          "Prístupnosť",
-          "Testovanie",
+          "C++",
+          "Python",
+          "Electron",
+          "Qt",
           "Integrácia Stripe",
-          "Integrácia AI"
+          "Integrácia AI",
+          "Testovanie",
+          "Observability"
         ]
       }
     ],
     "projectSummaries": [
       {
         "title": "SplitWallet",
-        "description": "Sofistikovaná aplikácia na zdieľanie výdavkov, navrhnutá na pomoc používateľom sledovať, spravovať a deliť výdavky v skupinách.",
+        "description": "Aplikácia na zdieľanie výdavkov s real-time synchronizáciou, offline UX a prémiovými funkciami so Stripe.",
         "link": "https://splitwallet.nexelon.sk/",
         "technologies": [
-          "Next.js",
-          "TypeScript",
+          "Next.js (App Router)",
           "tRPC",
           "PostgreSQL",
           "Drizzle ORM",
           "Zustand",
+          "React Query",
           "Tailwind CSS"
-        ]
+        ],
+        "impact": "Typovo bezpečné výpočty a validácie znížili chyby pri vyrovnávaní o ~30 %; SSR/ISR drží LCP aj SEO rýchle."
+      },
+      {
+        "title": "Tempora – dochádzka & dovolenky",
+        "description": "B2B dochádzkový systém s príchodmi/odchodmi, schvaľovaním dovoleniek, reportmi, rolami a audit logom.",
+        "link": "http://tempora-demo.nexelon.sk/",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "tRPC",
+          "NextAuth",
+          "Better Auth"
+        ],
+        "impact": "Modulárne domény so server actions, optimistickými update-mi, cachingom a exportmi pre účtovníctvo."
+      },
+      {
+        "title": "Sklad & fakturácia – cukráreň",
+        "description": "Re-platform z Node.js + Express + Vanilla stacku na Next.js + Styled Components na zjednotenie FE/BE dodávky.",
+        "technologies": [
+          "Next.js",
+          "Styled Components",
+          "TypeScript",
+          "PostgreSQL"
+        ],
+        "impact": "Vyššia typová bezpečnosť, kratší time-to-feature a spoľahlivá tlač faktúr a skladových pohybov."
+      },
+      {
+        "title": "Dodacie listy – Electron + React",
+        "description": "Desktop aplikácia s lokálnym úložiskom, offline UX, synchronizačnými modulmi a robustnou tlačou.",
+        "technologies": ["Electron", "React", "TypeScript"],
+        "impact": "Garantované offline fungovanie pre terénne tímy so zachovanou konzistenciou dát medzi zariadeniami."
+      },
+      {
+        "title": "Skladové hospodárstvo – reklamná agentúra",
+        "description": "Platforma na príjem/výdaj materiálu, oceňovanie, doklady a role-based prístupy na Next.js + Drizzle.",
+        "technologies": [
+          "Next.js",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "tRPC",
+          "Tailwind CSS"
+        ],
+        "impact": "Bezpečné role-based operácie s auditovateľnými exportmi a predvídateľnými deploymentmi."
       }
     ]
   }

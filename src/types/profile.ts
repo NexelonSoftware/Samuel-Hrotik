@@ -17,6 +17,7 @@ export type ProjectSummary = {
   description: string;
   link?: string;
   technologies: string[];
+  impact?: string;
 };
 
 export type ContactDetail = {

@@ -31,6 +31,16 @@ export default async function Home({
 
   const langObj = await getLanguage(lang);
   const profile = langObj.profile as ProfileContent;
+  const projectSummaries = profile.projectSummaries ?? [];
+  const featuredProject = projectSummaries[0];
+  const additionalProjects = projectSummaries.slice(1);
+  const profileHighlights = langObj.cvSections?.profile?.paragraphs ?? [];
+  const competencyItems = langObj.cvSections?.competencies?.items ?? [];
+  const nexelon = langObj.cvSections?.nexelon;
+  const principles = langObj.cvSections?.principles?.items ?? [];
+  const achievements = langObj.cvSections?.achievements?.items ?? [];
+  const languageItems = langObj.cvSections?.languages?.items ?? [];
+  const impactLabel = ts(langObj, langMaps.cv.impactLabel);
   return (
     <div className="flex min-h-screen flex-col">
       <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b backdrop-blur">
@@ -103,10 +113,6 @@ export default async function Home({
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                 {ts(langObj, langMaps.header.fullstackDeveloper)}
-                <span className="text-primary">
-                  {" "}
-                  {ts(langObj, langMaps.header.specialization)}
-                </span>
               </h1>
               <p className="text-muted-foreground text-xl">
                 {ts(langObj, langMaps.header.buildingModern)}
@@ -187,72 +193,49 @@ export default async function Home({
           </div>
         </section>
 
+        {competencyItems.length ? (
+          <section id="competencies" className="border-t px-2 py-24 sm:py-32">
+            <div className="container mx-auto">
+              <h2 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
+                {langObj.cvSections?.competencies?.title}
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                {competencyItems.map((item) => (
+                  <div
+                    key={item.title}
+                    className="bg-background border-muted hover:border-primary/40 rounded-lg border p-6 shadow-sm transition-colors"
+                  >
+                    <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         <section id="skills" className="bg-muted/40 py-24 sm:py-32">
           <div className="container mx-auto px-2">
             <h2 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
               {ts(langObj, langMaps.skills.title)}
             </h2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="bg-background rounded-lg p-6 shadow-sm">
-                <h3 className="mb-4 text-xl font-bold">
-                  {ts(langObj, langMaps.skills.frontend)}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge name="Next.js" />
-                  <SkillBadge name="React" />
-                  <SkillBadge name="TypeScript" />
-                  <SkillBadge name="Tailwind CSS" />
-                  <SkillBadge name="Zustand" />
-                  <SkillBadge name="React Query" />
-                  <SkillBadge name="Shadcn/UI" />
-                  <SkillBadge name="Responsive Design" />
+              {profile.skillCategories.map((category) => (
+                <div
+                  key={category.name}
+                  className="bg-background rounded-lg p-6 shadow-sm"
+                >
+                  <h3 className="mb-4 text-xl font-bold">{category.name}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.items.map((skill) => (
+                      <SkillBadge
+                        key={`${category.name}-${skill}`}
+                        name={skill}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="bg-background rounded-lg p-6 shadow-sm">
-                <h3 className="mb-4 text-xl font-bold">
-                  {ts(langObj, langMaps.skills.backend)}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge name="Node.js" />
-                  <SkillBadge name="tRPC" />
-                  <SkillBadge name="PostgreSQL" />
-                  <SkillBadge name="Drizzle ORM" />
-                  <SkillBadge name="NextAuth.js" />
-                  <SkillBadge name="API Design" />
-                  <SkillBadge name="Firebase" />
-                  <SkillBadge name="Serverless" />
-                </div>
-              </div>
-              <div className="bg-background rounded-lg p-6 shadow-sm">
-                <h3 className="mb-4 text-xl font-bold">
-                  {ts(langObj, langMaps.skills.devops)}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge name="Git" />
-                  <SkillBadge name="Docker" />
-                  <SkillBadge name="Turborepo" />
-                  <SkillBadge name="CI/CD" />
-                  <SkillBadge name="Vercel" />
-                  <SkillBadge name="AWS" />
-                  <SkillBadge name="Kubernetes" />
-                  <SkillBadge name="Monorepo" />
-                </div>
-              </div>
-              <div className="bg-background rounded-lg p-6 shadow-sm">
-                <h3 className="mb-4 text-xl font-bold">
-                  {ts(langObj, langMaps.skills.other)}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge name="Agile" />
-                  <SkillBadge name="UI/UX Design" />
-                  <SkillBadge name="Performance Optimization" />
-                  <SkillBadge name="Internationalization" />
-                  <SkillBadge name="Accessibility" />
-                  <SkillBadge name="Testing" />
-                  <SkillBadge name="Stripe Integration" />
-                  <SkillBadge name="AI Integration" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -261,49 +244,91 @@ export default async function Home({
           id="projects"
           className="container mx-auto px-2 py-24 sm:py-32"
         >
-          <h2 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
-            {ts(langObj, langMaps.projects.title)}
-          </h2>
-          <div className="grid gap-8">
-            <ProjectCard
-              langObj={langObj}
-              title={ts(langObj, langMaps.projects.splitwallet.title)}
-              description={ts(
-                langObj,
-                langMaps.projects.splitwallet.description,
-              )}
-              image="/Splitwallet.png?height=724&width=1290"
-              tags={[
-                "Next.js",
-                "TypeScript",
-                "tRPC",
-                "PostgreSQL",
-                "Drizzle ORM",
-                "Zustand",
-                "Tailwind CSS",
-              ]}
-              link="https://splitwallet.nexelon.sk/"
-              featured={true}
-            />
-            {/* 
-            <div className="grid gap-8 md:grid-cols-2">
+          <div className="mb-10 text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              {ts(langObj, langMaps.projects.title)}
+            </h2>
+            {nexelon?.intro ? (
+              <p className="text-muted-foreground mx-auto max-w-3xl">
+                {nexelon.intro}
+              </p>
+            ) : null}
+          </div>
+          {nexelon?.responsibilities?.length ? (
+            <div className="border-muted/60 bg-muted/40 mb-12 rounded-2xl border p-6 shadow-sm">
+              <div className="text-primary mb-4 text-sm font-semibold tracking-wide uppercase">
+                {nexelon.responsibilitiesTitle}
+              </div>
+              <div className="grid gap-4 lg:grid-cols-3">
+                {nexelon.responsibilities.map((item) => (
+                  <p key={item} className="text-muted-foreground text-left">
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ) : null}
+          {featuredProject ? (
+            <div className="grid gap-8">
               <ProjectCard
-                title={ts(langObj, langMaps.projects.warehouse.title)}
-                description={ts(langObj, langMaps.projects.warehouse.description}
-                image="/Warehouse.png?height=300&width=400"
-                tags={["Next.js", "React", "PostgreSQL"]}
-                langData={ts(langObj, langMaps)}
-              />
-              <ProjectCard
-                title={ts(langObj, langMaps.projects.invoice.title}
-                description={ts(langObj, langMaps.projects.invoice.description}
-                image="/InvoiceGenerator.png?height=300&width=400"
-                tags={["React", "Electron", "Tailwind CSS"]}
-                langData={ts(langObj, langMaps}
+                langObj={langObj}
+                title={featuredProject.title}
+                description={featuredProject.description}
+                image="/Splitwallet.png?height=724&width=1290"
+                tags={featuredProject.technologies}
+                link={featuredProject.link}
+                featured={true}
               />
             </div>
-            */}
-          </div>
+          ) : null}
+          {additionalProjects.length ? (
+            <div className="mt-12 space-y-6">
+              <h3 className="text-2xl font-bold">
+                {nexelon?.projectsTitle ?? ts(langObj, langMaps.projects.title)}
+              </h3>
+              <div className="grid gap-6 lg:grid-cols-2">
+                {additionalProjects.map((project) => (
+                  <article
+                    key={project.title}
+                    className="bg-background border-muted rounded-xl border p-6 shadow-sm"
+                  >
+                    <div className="mb-3 flex flex-col justify-between gap-2 md:flex-row md:items-center">
+                      <h4 className="text-xl font-semibold">{project.title}</h4>
+                      {project.link ? (
+                        <Link
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary text-sm font-medium underline"
+                        >
+                          {project.link}
+                        </Link>
+                      ) : null}
+                    </div>
+                    <p className="text-muted-foreground mb-3">
+                      {project.description}
+                    </p>
+                    {project.impact ? (
+                      <p className="text-muted-foreground mb-4 text-sm">
+                        <span className="text-foreground font-semibold">
+                          {impactLabel}
+                        </span>{" "}
+                        {project.impact}
+                      </p>
+                    ) : null}
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <SkillBadge
+                          key={`${project.title}-${tech}`}
+                          name={tech}
+                        />
+                      ))}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </section>
 
         <section id="splitwallet" className="bg-muted/40 py-24 sm:py-32">
@@ -431,6 +456,71 @@ export default async function Home({
             </div>
           </div>
         </section>
+
+        {(principles.length ||
+          achievements.length ||
+          languageItems.length ||
+          noteItems.length) && (
+          <section
+            id="principles"
+            className="container mx-auto border-t px-2 py-24 sm:py-32"
+          >
+            <div className="grid gap-8 lg:grid-cols-2">
+              {principles.length ? (
+                <div className="bg-background border-muted rounded-2xl border p-6 shadow-sm">
+                  <h3 className="mb-4 text-2xl font-bold">
+                    {langObj.cvSections?.principles?.title}
+                  </h3>
+                  <ul className="text-muted-foreground space-y-3">
+                    {principles.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="text-primary bg-primary mt-[6px] h-2 w-2 rounded-full" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {achievements.length ? (
+                <div className="bg-background border-muted rounded-2xl border p-6 shadow-sm">
+                  <h3 className="mb-4 text-2xl font-bold">
+                    {langObj.cvSections?.achievements?.title}
+                  </h3>
+                  <ul className="text-muted-foreground space-y-3">
+                    {achievements.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="text-primary bg-primary mt-[6px] h-2 w-2 rounded-full" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              {languageItems.length ? (
+                <div className="bg-muted/40 border-muted rounded-2xl border p-6">
+                  <h4 className="mb-4 text-xl font-semibold">
+                    {langObj.cvSections?.languages?.title}
+                  </h4>
+                  <div className="space-y-3">
+                    {languageItems.map((language) => (
+                      <div
+                        key={language.name}
+                        className="bg-background flex items-center justify-between rounded-lg px-4 py-3 shadow-sm"
+                      >
+                        <span className="font-medium">{language.name}</span>
+                        <span className="text-muted-foreground text-sm">
+                          {language.level}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          </section>
+        )}
 
         <section
           id="contact"

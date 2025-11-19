@@ -8,6 +8,9 @@ import { Button } from "@/components/ui/button";
 
 import useTranslation from "~/language/useTranslation";
 import type { LangType } from "~/language/languages";
+import type { ProfileContent } from "~/types/profile";
+
+type CVSections = LangType["cvSections"];
 
 type CVPageClientProps = {
   langObj: LangType;
@@ -15,6 +18,22 @@ type CVPageClientProps = {
 
 export function CVPageClient({ langObj }: CVPageClientProps) {
   const { t, lang } = useTranslation();
+  const profileContent = langObj.profile as ProfileContent;
+  const personalInfo = profileContent.personalInfo;
+  const personalLinks = personalInfo.links ?? [];
+  const contactDetails = personalInfo.contactDetails ?? [];
+  const experiences = profileContent.experiences ?? [];
+  const skillCategories = profileContent.skillCategories ?? [];
+  const projectSummaries = profileContent.projectSummaries ?? [];
+  const cvSections = langObj.cvSections as CVSections | undefined;
+  const statusItems = cvSections?.status?.items ?? [];
+  const profileParagraphs = cvSections?.profile?.paragraphs ?? [];
+  const competencyItems = cvSections?.competencies?.items ?? [];
+  const principleItems = cvSections?.principles?.items ?? [];
+  const achievementItems = cvSections?.achievements?.items ?? [];
+  const languageItems = cvSections?.languages?.items ?? [];
+  const noteItems = cvSections?.notes?.items ?? [];
+  const nexelonSection = cvSections?.nexelon;
 
   const handlePrint = useCallback(() => {
     if (typeof window === "undefined") {
@@ -42,9 +61,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
             <p className="text-muted-foreground mt-1 text-lg font-semibold">
               {t(lang.header.fullstackDeveloper)}
             </p>
-            <p className="text-muted-foreground text-sm">
-              {t(lang.header.specialization)}
-            </p>
 
             <div className="text-muted-foreground mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm print:text-black">
               <span>{t(lang.profile.personalInfo.location)}</span>
@@ -54,7 +70,7 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
               >
                 {t(lang.profile.personalInfo.email)}
               </Link>
-              {langObj.profile.personalInfo.links.map((link) => (
+              {personalLinks.map((link) => (
                 <Link
                   key={link.url}
                   href={link.url}
@@ -67,9 +83,9 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
               ))}
             </div>
 
-            {langObj.profile.personalInfo.contactDetails?.length ? (
+            {contactDetails.length ? (
               <dl className="text-muted-foreground mt-4 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2 print:text-black">
-                {langObj.profile.personalInfo.contactDetails.map((detail) => {
+                {contactDetails.map((detail) => {
                   const noteText = detail.note ? ` ${detail.note}` : "";
                   const key = `${detail.label}-${detail.value}`;
                   const isExternalLink =
@@ -103,6 +119,32 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
 
           <div className="mt-6 grid gap-8 md:grid-cols-[1fr_1.5fr] md:gap-10">
             <section className="space-y-8">
+              {statusItems.length ? (
+                <div>
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.status?.title}
+                  </h2>
+                  <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
+                    {statusItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {profileParagraphs.length ? (
+                <div>
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.profile?.title}
+                  </h2>
+                  <div className="text-muted-foreground mt-3 space-y-3 text-sm leading-relaxed print:text-black">
+                    {profileParagraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
                   {t(lang.about.title)}
@@ -119,7 +161,7 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                   {t(lang.skills.title)}
                 </h2>
                 <div className="mt-3 space-y-4 text-sm">
-                  {langObj.profile.skillCategories.map((category) => (
+                  {skillCategories.map((category) => (
                     <div key={category.name} className="space-y-1">
                       <h3 className="text-foreground font-semibold print:text-black">
                         {category.name}
@@ -131,6 +173,81 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                   ))}
                 </div>
               </div>
+
+              {competencyItems.length ? (
+                <div>
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.competencies?.title}
+                  </h2>
+                  <div className="text-muted-foreground mt-3 space-y-4 text-sm leading-relaxed print:text-black">
+                    {competencyItems.map((item) => (
+                      <div key={item.title}>
+                        <h3 className="text-foreground font-semibold print:text-black">
+                          {item.title}
+                        </h3>
+                        <p>{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
+              {principleItems.length ? (
+                <div>
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.principles?.title}
+                  </h2>
+                  <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
+                    {principleItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {achievementItems.length ? (
+                <div>
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.achievements?.title}
+                  </h2>
+                  <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
+                    {achievementItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {languageItems.length ? (
+                <div>
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.languages?.title}
+                  </h2>
+                  <ul className="text-muted-foreground mt-3 space-y-2 text-sm leading-relaxed print:text-black">
+                    {languageItems.map((item) => (
+                      <li key={`${item.name}-${item.level}`}>
+                        <span className="text-foreground font-semibold print:text-black">
+                          {item.name}
+                        </span>{" "}
+                        · {item.level}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              {noteItems.length ? (
+                <div>
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.notes?.title}
+                  </h2>
+                  <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
+                    {noteItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </section>
 
             <section className="space-y-8">
@@ -139,7 +256,7 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                   {t(lang.experience.title)}
                 </h2>
                 <div className="mt-3 space-y-6">
-                  {langObj.profile.experiences.map((experience) => (
+                  {experiences.map((experience) => (
                     <article
                       key={`${experience.company}-${experience.position}-${experience.period}`}
                       className="space-y-1"
@@ -173,12 +290,42 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                 </div>
               </div>
 
+              {nexelonSection ? (
+                <div className="space-y-4">
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {nexelonSection.title}
+                  </h2>
+                  <p className="text-muted-foreground text-sm leading-relaxed print:text-black">
+                    {nexelonSection.intro}
+                  </p>
+                  {nexelonSection.responsibilities?.length ? (
+                    <div>
+                      <h3 className="text-foreground text-base font-semibold print:text-black">
+                        {nexelonSection.responsibilitiesTitle}
+                      </h3>
+                      <ul className="text-muted-foreground mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
+                        {nexelonSection.responsibilities.map(
+                          (responsibility) => (
+                            <li key={responsibility}>{responsibility}</li>
+                          ),
+                        )}
+                      </ul>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
                   {t(lang.projects.title)}
                 </h2>
+                {nexelonSection?.projectsTitle ? (
+                  <p className="text-muted-foreground mt-2 text-sm print:text-black">
+                    {nexelonSection.projectsTitle}
+                  </p>
+                ) : null}
                 <div className="mt-3 space-y-5">
-                  {langObj.profile.projectSummaries.map((project) => (
+                  {projectSummaries.map((project) => (
                     <article key={project.title} className="space-y-1">
                       <div className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
                         <h3 className="text-foreground text-lg font-semibold print:text-black">
@@ -204,6 +351,14 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                         </span>{" "}
                         {project.technologies.join(", ")}
                       </p>
+                      {project.impact ? (
+                        <p className="text-muted-foreground text-sm print:text-black">
+                          <span className="text-foreground font-semibold print:text-black">
+                            {t(lang.cv.impactLabel)}
+                          </span>{" "}
+                          {project.impact}
+                        </p>
+                      ) : null}
                     </article>
                   ))}
                 </div>

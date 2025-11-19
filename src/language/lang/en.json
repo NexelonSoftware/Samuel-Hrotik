@@ -19,39 +19,129 @@
     "sending": "Sending..."
   },
   "header": {
-    "fullstackDeveloper": "Fullstack Developer",
-    "specialization": "Specialized in Next.js & React",
-    "buildingModern": "Building modern web and mobile applications with cutting-edge technologies"
+    "fullstackDeveloper": "Senior Full-Stack Engineer",
+    "buildingModern": "Designing scalable, secure, high-performance web and cloud platforms"
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I'm a passionate fullstack developer with expertise in building modern web and mobile applications. With a strong foundation in Next.js, React, and TypeScript, I create scalable, performant, and user-friendly applications.",
-    "paragraph2": "My experience spans across the entire development stack, from designing intuitive user interfaces to implementing robust backend systems and database architectures. I'm particularly skilled in building complex applications with sophisticated state management and synchronization systems.",
-    "paragraph3": "I'm always eager to take on challenging projects that push the boundaries of what's possible with modern web technologies."
+    "paragraph1": "Senior full-stack engineer and software architect specializing in React and Next.js. I design and ship scalable applications with a focus on performance, developer experience, security, and maintainability.",
+    "paragraph2": "I have deep experience with API contracts (tRPC/REST), state management (Zustand/React Query), data layers (PostgreSQL, Drizzle ORM), authentication (NextAuth, Better Auth), and CI/CD on Google Cloud (Cloud Build/Run/SQL).",
+    "paragraph3": "I lead technical direction, set code standards (ESLint/Prettier), and implement observability plus release processes in Turborepo monorepos."
+  },
+  "cvSections": {
+    "status": {
+      "title": "Profile & Status",
+      "items": [
+        "Senior Full-Stack Engineer focused on React & Next.js",
+        "6+ years delivering web products, 5+ years leading scalable architecture and product direction",
+        "Founder and lead engineer at Nexelon s.r.o."
+      ]
+    },
+    "profile": {
+      "title": "Profile",
+      "paragraphs": [
+        "Senior full-stack engineer focused on React and Next.js, delivering scalable applications with performance, DX, security, and maintainability in mind.",
+        "Deep experience with API contracts (tRPC/REST), state management (Zustand/React Query), data layers (PostgreSQL, Drizzle ORM), authentication (NextAuth, Better Auth), and CI/CD automations on Google Cloud (Cloud Build/Run/SQL).",
+        "I lead technical direction, align stakeholders on architecture, set code standards (ESLint/Prettier), and build observability plus release processes in Turborepo monorepos."
+      ]
+    },
+    "competencies": {
+      "title": "Key Competencies",
+      "items": [
+        {
+          "title": "Architecture & System Design",
+          "description": "Modular monorepos, domain modeling, API contracts, caching, SSR/SSG/ISR, PWA/offline UX, and edge-friendly deployments."
+        },
+        {
+          "title": "Frontend Engineering",
+          "description": "Next.js (App Router), React, TypeScript, Tailwind CSS, Shadcn/UI, Zustand, React Query, performance tuning, accessibility, and responsive design."
+        },
+        {
+          "title": "Backend & Data",
+          "description": "Node.js, tRPC, Next.js server actions, PostgreSQL, Drizzle ORM, NextAuth/Better Auth, serverless patterns, and auditable data flows."
+        },
+        {
+          "title": "DevOps & Infrastructure",
+          "description": "Git, Docker, Turborepo, automated CI/CD, Google Cloud (Cloud Build/Run/SQL), observability, monitoring, and incident response."
+        },
+        {
+          "title": "Quality & DX",
+          "description": "Testing, linting, code review, release management, performance profiling, i18n, a11y, and developer onboarding."
+        },
+        {
+          "title": "Integrations & AI",
+          "description": "Stripe, AI orchestration and prompting, PDF tooling, Firebase, payment gateways, analytics, and secure third-party integrations."
+        }
+      ]
+    },
+    "nexelon": {
+      "title": "Nexelon s.r.o. – Founder & Lead Engineer",
+      "intro": "Tech lead, architect, and full-stack engineer delivering custom products including infrastructure, security, and SLAs.",
+      "responsibilitiesTitle": "Responsibilities",
+      "projectsTitle": "Selected Projects",
+      "responsibilities": [
+        "Define architecture, domains, and delivery plans for both greenfield and re-platforming initiatives.",
+        "Lead client communication, roadmap prioritization, and shared code standards across teams.",
+        "Operate CI/CD on Google Cloud with automated testing, observability, and release guardrails."
+      ]
+    },
+    "principles": {
+      "title": "Architecture Principles & Benefits",
+      "items": [
+        "Type-safe end-to-end stack (TypeScript + tRPC + Drizzle) with enforced contracts.",
+        "Performance and scale via SSR/ISR, caching, code-splitting, profiling, and render optimizations.",
+        "Security best practices in auth/session flows, auditing, and handling sensitive data.",
+        "DX through Turborepo monorepos, strict linting, conventional commits, and automated CI/CD.",
+        "Observability mindset with logging, metrics, error tracking, and SLO/SLA targets.",
+        "Accessible, localized UI built on a consistent Shadcn/UI design system."
+      ]
+    },
+    "achievements": {
+      "title": "Selected Achievements",
+      "items": [
+        "Re-platformed multiple products to Next.js, cutting codebase size by 20–35% and speeding up build/deploy loops.",
+        "Standardized Turborepo setups and Google Cloud CI/CD pipelines (Cloud Build + Cloud Run).",
+        "Designed Drizzle data models with safe migrations/rollbacks and automated release gates.",
+        "Established reliable release processes with linting, tests, and preview deployments on every change."
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        {
+          "name": "Slovak",
+          "level": "Native"
+        },
+        {
+          "name": "English",
+          "level": "B2 – professional working proficiency"
+        }
+      ]
+    }
   },
   "experience": {
     "title": "Work Experience"
   },
   "skills": {
-    "title": "Technical Skills",
+    "title": "Technology Stack",
     "frontend": "Frontend Development",
     "backend": "Backend Development",
-    "devops": "DevOps & Tools",
-    "other": "Other Skills"
+    "devops": "Tools & Infrastructure",
+    "other": "Additional Technologies"
   },
   "projects": {
     "title": "Featured Projects",
     "splitwallet": {
       "title": "SplitWallet",
-      "description": "A sophisticated expense-sharing application designed to help users track, manage, and split expenses within groups."
+      "description": "An expense-sharing platform with real-time sync, offline UX, PWA support, and premium Stripe features."
     },
     "warehouse": {
       "title": "Warehouse Assistant",
-      "description": "A modern warehouse management system with inventory tracking, order management, and real-time analytics."
+      "description": "Modern warehouse management with inventory tracking, order management, and real-time analytics."
     },
     "invoice": {
       "title": "Invoice Generator",
-      "description": "Invoice generator for ice cream shop with excel export."
+      "description": "Invoice tooling for an ice-cream shop with reliable Excel export."
     },
     "more": "+{count} more"
   },
@@ -59,28 +149,28 @@
     "title": "SplitWallet Case Study",
     "overview": {
       "title": "Project Overview",
-      "description": "SplitWallet is a sophisticated expense-sharing application designed to help users track, manage, and split expenses within groups. The app allows users to create wallets (expense groups), add expenses, track balances, generate reports, and settle debts efficiently."
+      "description": "SplitWallet is a sophisticated expense-sharing application that helps teams track, manage, and reconcile group costs. Users can create wallets, capture expenses, monitor balances, generate reports, and settle debts efficiently."
     },
     "technical": {
       "title": "Technical Highlights",
-      "item1": "Built as a monorepo using Next.js, tRPC, PostgreSQL, and Drizzle ORM",
-      "item2": "Implemented a sophisticated state synchronization system for offline functionality",
-      "item3": "Integrated AI-powered receipt scanning using Gemini 2.5 Pro",
-      "item4": "Developed a smart debt minimization algorithm with multiple reimbursement modes",
-      "item5": "Created a comprehensive design system with light and dark mode support"
+      "item1": "Monorepo built with Next.js, tRPC, PostgreSQL, Drizzle ORM, and Turborepo.",
+      "item2": "State sync system with offline operation, background revalidation, and conflict resolution.",
+      "item3": "AI-powered receipt processing using Gemini 2.5 Pro and PDF export tooling.",
+      "item4": "Debt minimization algorithms with multiple settlement modes and guardrails.",
+      "item5": "Comprehensive design system with accessible light/dark modes."
     },
     "features": {
       "title": "Key Features",
-      "item1": "Expense management with custom distribution among users",
-      "item2": "Group management with multiple wallets and hierarchical organization",
-      "item3": "Real-time updates and offline support with data synchronization",
-      "item4": "Multiple language support and currency conversion",
-      "item5": "Premium features with Stripe subscription integration"
+      "item1": "Expense management with configurable distribution models per user/group.",
+      "item2": "Wallet hierarchy with permissions, invitations, and contextual insights.",
+      "item3": "Real-time updates, offline support, and transparent sync states.",
+      "item4": "Localization, multi-currency, and automated reminders.",
+      "item5": "Premium functionality backed by Stripe subscriptions."
     }
   },
   "contact": {
     "title": "Get In Touch",
-    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "description": "Open to new products, architecture reviews, or leadership engagements for scaling engineering teams.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -104,27 +194,28 @@
     "system": "System"
   },
   "metadata": {
-    "title": "Samuel Hrotik - Fullstack Developer",
-    "description": "Samuel Hrotik is a passionate fullstack developer specializing in Next.js and React, building modern web and mobile applications with cutting-edge technologies.",
+    "title": "Samuel Hrotik - Senior Full-Stack Engineer",
+    "description": "Samuel Hrotik is a senior full-stack engineer focused on React/Next.js, type-safe APIs, and automation on Google Cloud.",
     "keywords": [
       "Samuel Hrotik",
-      "Fullstack Developer",
+      "Full-Stack Engineer",
       "Next.js",
       "React",
       "Web Development",
-      "Mobile Applications",
-      "Software Engineer"
+      "Google Cloud",
+      "tRPC"
     ]
   },
   "cv": {
     "keySkills": "Key skills:",
-    "technologies": "Technologies:"
+    "technologies": "Technologies:",
+    "impactLabel": "Impact:"
   },
   "profile": {
     "personalInfo": {
       "name": "Samuel Hrotik",
-      "role": "Fullstack Developer specialized in Next.js & React",
-      "location": "Nitra, Slovakia",
+      "role": "Senior Full-Stack Engineer",
+      "location": "Nitra, Slovakia (remote-friendly)",
       "email": "samuel.hrotik@gmail.com",
       "links": [
         {
@@ -142,7 +233,12 @@
       ],
       "contactDetails": [
         {
-          "label": "Date of birth",
+          "label": "Phone",
+          "value": "+421 915 161 060",
+          "href": "tel:+421915161060"
+        },
+        {
+          "label": "Date of Birth",
           "value": "06/03/1995"
         },
         {
@@ -150,146 +246,184 @@
           "value": "Slovak"
         },
         {
-          "label": "Phone",
-          "value": "(+421) 915 161 060",
-          "href": "tel:+421915161060",
-          "note": "(Mobile)"
-        },
-        {
-          "label": "Email address",
-          "value": "samuel.hrotik@gmail.com",
-          "href": "mailto:samuel.hrotik@gmail.com"
-        },
-        {
-          "label": "LinkedIn",
-          "value": "www.linkedin.com/in/samuel-hrotik-071399132",
-          "href": "https://www.linkedin.com/in/samuel-hrotik-071399132/"
-        },
-        {
-          "label": "Whatsapp Messenger",
-          "value": "+421 915 161 060",
-          "href": "https://wa.me/421915161060"
-        },
-        {
           "label": "Address",
-          "value": "Sasinkovo 90, 92065 Sasinkovo, Slovakia",
-          "note": "(Home)"
+          "value": "Sasinkovo 90, 920 65 Sasinkovo, Slovakia"
         }
       ]
     },
     "experiences": [
       {
         "company": "Foxit",
-        "position": "Development Engineer and PDF Specialist",
-        "period": "Jan 2025 - Present · 5 mos",
+        "position": "Development Engineer & PDF Specialist",
+        "period": "01/2025 – Present",
         "location": "Slovakia · Remote",
-        "skills": ["PDF", "Next.js", "C++", "Web Development"]
-      },
-      {
-        "company": "Foxit",
-        "position": "Software Engineer",
-        "period": "Oct 2023 - Jan 2025 · 1 yr 4 mos",
-        "location": "Slovakia · Remote",
+        "description": "Leading Tagged PDF School (PDF Association) on Next.js + tRPC hosted on Google Cloud, integrating C++ validation engines, and running CI/CD plus monitoring for a mission-critical PDF education platform.",
         "skills": [
-          "Git",
-          "English",
-          "Cross-platform Development",
-          "JavaScript",
-          "ESLint",
-          "React.js",
-          "Cloud Applications"
+          "Next.js",
+          "tRPC",
+          "Google Cloud",
+          "PDF SDK",
+          "C++",
+          "Observability"
         ]
       },
       {
         "company": "Foxit",
-        "position": "Junior Software Engineer",
-        "period": "Jul 2022 - Oct 2023 · 1 yr 4 mos",
+        "position": "Software Engineer",
+        "period": "10/2023 – 01/2025",
         "location": "Slovakia · Remote",
-        "skills": ["C++", "Python"]
+        "description": "Delivered web and cloud components, automated quality checks, introduced ESLint/Prettier standards, and strengthened CI steps across teams.",
+        "skills": ["React", "TypeScript", "Git", "ESLint", "Cloud Applications"]
+      },
+      {
+        "company": "Foxit",
+        "position": "Junior Software Engineer",
+        "period": "07/2022 – 10/2023",
+        "location": "Slovakia · Remote",
+        "description": "Built C++/Python tooling, integration modules, and cross-platform builds for PDF workflows.",
+        "skills": ["C++", "Python", "Cross-platform builds"]
       },
       {
         "company": "Foxit",
         "position": "Quality Assurance Engineer",
-        "period": "Nov 2020 - Jul 2022 · 1 yr 9 mos",
-        "location": "Slovakia · Remote"
+        "period": "11/2020 – 07/2022",
+        "location": "Slovakia · Remote",
+        "description": "Owned testing strategy, automation, scenarios, and reporting across PDF products.",
+        "skills": ["QA Automation", "Test Strategy", "Reporting"]
+      },
+      {
+        "company": "Nexelon s.r.o.",
+        "position": "Founder & Lead Engineer",
+        "period": "2020 – Present",
+        "location": "Slovakia · Remote",
+        "description": "Tech lead for bespoke products—architecture, full-stack delivery, client communication, infrastructure, security, and SLAs.",
+        "skills": [
+          "Tech leadership",
+          "Architecture",
+          "Client delivery",
+          "CI/CD"
+        ]
       },
       {
         "company": "HIMA",
         "position": "Developer",
-        "period": "Jun 2020 - Sep 2020 · 4 mos",
+        "period": "06/2020 – 09/2020",
         "location": "Nitra Region, Slovakia",
-        "description": "Development of pipeline application system FLOWorX which includes leak detection. (C++, Qt)",
-        "skills": ["C++", "Qt"]
+        "description": "Developed FLOWorX pipeline system with leak detection in C++/Qt and modular extensions.",
+        "skills": ["C++", "Qt", "Systems design"]
       }
     ],
     "skillCategories": [
       {
-        "name": "Frontend Development",
+        "name": "Frontend",
         "items": [
           "Next.js",
           "React",
           "TypeScript",
           "Tailwind CSS",
+          "Shadcn/UI",
           "Zustand",
           "React Query",
-          "Shadcn/UI",
           "Responsive Design"
         ]
       },
       {
-        "name": "Backend Development",
+        "name": "Backend",
         "items": [
           "Node.js",
           "tRPC",
           "PostgreSQL",
           "Drizzle ORM",
           "NextAuth.js",
-          "API Design",
-          "Firebase",
-          "Serverless"
+          "Better Auth",
+          "Serverless",
+          "API Design"
         ]
       },
       {
-        "name": "DevOps & Tools",
+        "name": "Tools & Infrastructure",
         "items": [
           "Git",
           "Docker",
           "Turborepo",
+          "Google Cloud (Cloud Run/Build/SQL)",
           "CI/CD",
-          "Vercel",
-          "AWS",
-          "Kubernetes",
           "Monorepo"
         ]
       },
       {
-        "name": "Other Skills",
+        "name": "Additional Technologies",
         "items": [
-          "Agile",
-          "UI/UX Design",
-          "Performance Optimization",
-          "Internationalization",
-          "Accessibility",
-          "Testing",
+          "C++",
+          "Python",
+          "Electron",
+          "Qt",
           "Stripe Integration",
-          "AI Integration"
+          "AI Integration",
+          "Testing",
+          "Observability"
         ]
       }
     ],
     "projectSummaries": [
       {
         "title": "SplitWallet",
-        "description": "A sophisticated expense-sharing application designed to help users track, manage, and split expenses within groups.",
+        "description": "Expense-sharing platform with real-time sync, offline UX, and premium features backed by Stripe.",
         "link": "https://splitwallet.nexelon.sk/",
         "technologies": [
-          "Next.js",
-          "TypeScript",
+          "Next.js (App Router)",
           "tRPC",
           "PostgreSQL",
           "Drizzle ORM",
           "Zustand",
+          "React Query",
           "Tailwind CSS"
-        ]
+        ],
+        "impact": "Type-safe calculations and validations reduced settlement mistakes by ~30%; SSR/ISR keeps LCP and SEO fast."
+      },
+      {
+        "title": "Tempora – Attendance & Leave",
+        "description": "B2B attendance system with check-ins/outs, vacation approvals, reporting, roles, and audit log.",
+        "link": "http://tempora-demo.nexelon.sk/",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "tRPC",
+          "NextAuth",
+          "Better Auth"
+        ],
+        "impact": "Modular domains with server actions, optimistic updates, caching, and accounting exports."
+      },
+      {
+        "title": "Inventory & Billing – Bakery",
+        "description": "Re-platform from Node.js + Express + vanilla stack to Next.js + Styled Components to unify FE/BE delivery.",
+        "technologies": [
+          "Next.js",
+          "Styled Components",
+          "TypeScript",
+          "PostgreSQL"
+        ],
+        "impact": "Higher type safety, faster time-to-feature, and reliable invoice/stock movement printing."
+      },
+      {
+        "title": "Delivery Notes – Electron + React",
+        "description": "Desktop app with local storage, offline UX, sync modules, and robust printing.",
+        "technologies": ["Electron", "React", "TypeScript"],
+        "impact": "Guaranteed offline workflows for field teams while keeping data consistent across devices."
+      },
+      {
+        "title": "Warehouse Management – Creative Agency",
+        "description": "Platform for material intake/issue, pricing, documents, and role-based access on Next.js + Drizzle.",
+        "technologies": [
+          "Next.js",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "tRPC",
+          "Tailwind CSS"
+        ],
+        "impact": "Secure role-based operations with auditable exports and predictable deployments."
       }
     ]
   }

@@ -21,7 +21,6 @@ export const langMaps = {
   },
   "header": {
     "fullstackDeveloper": "header.fullstackDeveloper",
-    "specialization": "header.specialization",
     "buildingModern": "header.buildingModern"
   },
   "about": {
@@ -29,6 +28,97 @@ export const langMaps = {
     "paragraph1": "about.paragraph1",
     "paragraph2": "about.paragraph2",
     "paragraph3": "about.paragraph3"
+  },
+  "cvSections": {
+    "status": {
+      "title": "cvSections.status.title",
+      "items": {
+        "0": "cvSections.status.items.0",
+        "1": "cvSections.status.items.1",
+        "2": "cvSections.status.items.2"
+      }
+    },
+    "profile": {
+      "title": "cvSections.profile.title",
+      "paragraphs": {
+        "0": "cvSections.profile.paragraphs.0",
+        "1": "cvSections.profile.paragraphs.1",
+        "2": "cvSections.profile.paragraphs.2"
+      }
+    },
+    "competencies": {
+      "title": "cvSections.competencies.title",
+      "items": {
+        "0": {
+          "title": "cvSections.competencies.items.0.title",
+          "description": "cvSections.competencies.items.0.description"
+        },
+        "1": {
+          "title": "cvSections.competencies.items.1.title",
+          "description": "cvSections.competencies.items.1.description"
+        },
+        "2": {
+          "title": "cvSections.competencies.items.2.title",
+          "description": "cvSections.competencies.items.2.description"
+        },
+        "3": {
+          "title": "cvSections.competencies.items.3.title",
+          "description": "cvSections.competencies.items.3.description"
+        },
+        "4": {
+          "title": "cvSections.competencies.items.4.title",
+          "description": "cvSections.competencies.items.4.description"
+        },
+        "5": {
+          "title": "cvSections.competencies.items.5.title",
+          "description": "cvSections.competencies.items.5.description"
+        }
+      }
+    },
+    "nexelon": {
+      "title": "cvSections.nexelon.title",
+      "intro": "cvSections.nexelon.intro",
+      "responsibilitiesTitle": "cvSections.nexelon.responsibilitiesTitle",
+      "projectsTitle": "cvSections.nexelon.projectsTitle",
+      "responsibilities": {
+        "0": "cvSections.nexelon.responsibilities.0",
+        "1": "cvSections.nexelon.responsibilities.1",
+        "2": "cvSections.nexelon.responsibilities.2"
+      }
+    },
+    "principles": {
+      "title": "cvSections.principles.title",
+      "items": {
+        "0": "cvSections.principles.items.0",
+        "1": "cvSections.principles.items.1",
+        "2": "cvSections.principles.items.2",
+        "3": "cvSections.principles.items.3",
+        "4": "cvSections.principles.items.4",
+        "5": "cvSections.principles.items.5"
+      }
+    },
+    "achievements": {
+      "title": "cvSections.achievements.title",
+      "items": {
+        "0": "cvSections.achievements.items.0",
+        "1": "cvSections.achievements.items.1",
+        "2": "cvSections.achievements.items.2",
+        "3": "cvSections.achievements.items.3"
+      }
+    },
+    "languages": {
+      "title": "cvSections.languages.title",
+      "items": {
+        "0": {
+          "name": "cvSections.languages.items.0.name",
+          "level": "cvSections.languages.items.0.level"
+        },
+        "1": {
+          "name": "cvSections.languages.items.1.name",
+          "level": "cvSections.languages.items.1.level"
+        }
+      }
+    }
   },
   "experience": {
     "title": "experience.title"
@@ -119,7 +209,8 @@ export const langMaps = {
   },
   "cv": {
     "keySkills": "cv.keySkills",
-    "technologies": "cv.technologies"
+    "technologies": "cv.technologies",
+    "impactLabel": "cv.impactLabel"
   },
   "profile": {
     "personalInfo": {
@@ -144,7 +235,8 @@ export const langMaps = {
       "contactDetails": {
         "0": {
           "label": "profile.personalInfo.contactDetails.0.label",
-          "value": "profile.personalInfo.contactDetails.0.value"
+          "value": "profile.personalInfo.contactDetails.0.value",
+          "href": "profile.personalInfo.contactDetails.0.href"
         },
         "1": {
           "label": "profile.personalInfo.contactDetails.1.label",
@@ -152,29 +244,11 @@ export const langMaps = {
         },
         "2": {
           "label": "profile.personalInfo.contactDetails.2.label",
-          "value": "profile.personalInfo.contactDetails.2.value",
-          "href": "profile.personalInfo.contactDetails.2.href",
-          "note": "profile.personalInfo.contactDetails.2.note"
+          "value": "profile.personalInfo.contactDetails.2.value"
         },
         "3": {
           "label": "profile.personalInfo.contactDetails.3.label",
-          "value": "profile.personalInfo.contactDetails.3.value",
-          "href": "profile.personalInfo.contactDetails.3.href"
-        },
-        "4": {
-          "label": "profile.personalInfo.contactDetails.4.label",
-          "value": "profile.personalInfo.contactDetails.4.value",
-          "href": "profile.personalInfo.contactDetails.4.href"
-        },
-        "5": {
-          "label": "profile.personalInfo.contactDetails.5.label",
-          "value": "profile.personalInfo.contactDetails.5.value",
-          "href": "profile.personalInfo.contactDetails.5.href"
-        },
-        "6": {
-          "label": "profile.personalInfo.contactDetails.6.label",
-          "value": "profile.personalInfo.contactDetails.6.value",
-          "note": "profile.personalInfo.contactDetails.6.note"
+          "value": "profile.personalInfo.contactDetails.3.value"
         }
       }
     },
@@ -184,11 +258,14 @@ export const langMaps = {
         "position": "profile.experiences.0.position",
         "period": "profile.experiences.0.period",
         "location": "profile.experiences.0.location",
+        "description": "profile.experiences.0.description",
         "skills": {
           "0": "profile.experiences.0.skills.0",
           "1": "profile.experiences.0.skills.1",
           "2": "profile.experiences.0.skills.2",
-          "3": "profile.experiences.0.skills.3"
+          "3": "profile.experiences.0.skills.3",
+          "4": "profile.experiences.0.skills.4",
+          "5": "profile.experiences.0.skills.5"
         }
       },
       "1": {
@@ -196,14 +273,13 @@ export const langMaps = {
         "position": "profile.experiences.1.position",
         "period": "profile.experiences.1.period",
         "location": "profile.experiences.1.location",
+        "description": "profile.experiences.1.description",
         "skills": {
           "0": "profile.experiences.1.skills.0",
           "1": "profile.experiences.1.skills.1",
           "2": "profile.experiences.1.skills.2",
           "3": "profile.experiences.1.skills.3",
-          "4": "profile.experiences.1.skills.4",
-          "5": "profile.experiences.1.skills.5",
-          "6": "profile.experiences.1.skills.6"
+          "4": "profile.experiences.1.skills.4"
         }
       },
       "2": {
@@ -211,16 +287,24 @@ export const langMaps = {
         "position": "profile.experiences.2.position",
         "period": "profile.experiences.2.period",
         "location": "profile.experiences.2.location",
+        "description": "profile.experiences.2.description",
         "skills": {
           "0": "profile.experiences.2.skills.0",
-          "1": "profile.experiences.2.skills.1"
+          "1": "profile.experiences.2.skills.1",
+          "2": "profile.experiences.2.skills.2"
         }
       },
       "3": {
         "company": "profile.experiences.3.company",
         "position": "profile.experiences.3.position",
         "period": "profile.experiences.3.period",
-        "location": "profile.experiences.3.location"
+        "location": "profile.experiences.3.location",
+        "description": "profile.experiences.3.description",
+        "skills": {
+          "0": "profile.experiences.3.skills.0",
+          "1": "profile.experiences.3.skills.1",
+          "2": "profile.experiences.3.skills.2"
+        }
       },
       "4": {
         "company": "profile.experiences.4.company",
@@ -230,7 +314,21 @@ export const langMaps = {
         "description": "profile.experiences.4.description",
         "skills": {
           "0": "profile.experiences.4.skills.0",
-          "1": "profile.experiences.4.skills.1"
+          "1": "profile.experiences.4.skills.1",
+          "2": "profile.experiences.4.skills.2",
+          "3": "profile.experiences.4.skills.3"
+        }
+      },
+      "5": {
+        "company": "profile.experiences.5.company",
+        "position": "profile.experiences.5.position",
+        "period": "profile.experiences.5.period",
+        "location": "profile.experiences.5.location",
+        "description": "profile.experiences.5.description",
+        "skills": {
+          "0": "profile.experiences.5.skills.0",
+          "1": "profile.experiences.5.skills.1",
+          "2": "profile.experiences.5.skills.2"
         }
       }
     },
@@ -269,9 +367,7 @@ export const langMaps = {
           "2": "profile.skillCategories.2.items.2",
           "3": "profile.skillCategories.2.items.3",
           "4": "profile.skillCategories.2.items.4",
-          "5": "profile.skillCategories.2.items.5",
-          "6": "profile.skillCategories.2.items.6",
-          "7": "profile.skillCategories.2.items.7"
+          "5": "profile.skillCategories.2.items.5"
         }
       },
       "3": {
@@ -301,7 +397,56 @@ export const langMaps = {
           "4": "profile.projectSummaries.0.technologies.4",
           "5": "profile.projectSummaries.0.technologies.5",
           "6": "profile.projectSummaries.0.technologies.6"
-        }
+        },
+        "impact": "profile.projectSummaries.0.impact"
+      },
+      "1": {
+        "title": "profile.projectSummaries.1.title",
+        "description": "profile.projectSummaries.1.description",
+        "link": "profile.projectSummaries.1.link",
+        "technologies": {
+          "0": "profile.projectSummaries.1.technologies.0",
+          "1": "profile.projectSummaries.1.technologies.1",
+          "2": "profile.projectSummaries.1.technologies.2",
+          "3": "profile.projectSummaries.1.technologies.3",
+          "4": "profile.projectSummaries.1.technologies.4",
+          "5": "profile.projectSummaries.1.technologies.5",
+          "6": "profile.projectSummaries.1.technologies.6"
+        },
+        "impact": "profile.projectSummaries.1.impact"
+      },
+      "2": {
+        "title": "profile.projectSummaries.2.title",
+        "description": "profile.projectSummaries.2.description",
+        "technologies": {
+          "0": "profile.projectSummaries.2.technologies.0",
+          "1": "profile.projectSummaries.2.technologies.1",
+          "2": "profile.projectSummaries.2.technologies.2",
+          "3": "profile.projectSummaries.2.technologies.3"
+        },
+        "impact": "profile.projectSummaries.2.impact"
+      },
+      "3": {
+        "title": "profile.projectSummaries.3.title",
+        "description": "profile.projectSummaries.3.description",
+        "technologies": {
+          "0": "profile.projectSummaries.3.technologies.0",
+          "1": "profile.projectSummaries.3.technologies.1",
+          "2": "profile.projectSummaries.3.technologies.2"
+        },
+        "impact": "profile.projectSummaries.3.impact"
+      },
+      "4": {
+        "title": "profile.projectSummaries.4.title",
+        "description": "profile.projectSummaries.4.description",
+        "technologies": {
+          "0": "profile.projectSummaries.4.technologies.0",
+          "1": "profile.projectSummaries.4.technologies.1",
+          "2": "profile.projectSummaries.4.technologies.2",
+          "3": "profile.projectSummaries.4.technologies.3",
+          "4": "profile.projectSummaries.4.technologies.4"
+        },
+        "impact": "profile.projectSummaries.4.impact"
       }
     }
   }
