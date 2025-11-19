@@ -66,7 +66,7 @@
         },
         {
           "title": "Quality & DX",
-          "description": "Testing, linting, code review, release management, performance profiling, i18n, a11y, and developer onboarding."
+          "description": "Testing (Cypress, automated E2E tests), linting, code review, release management, performance profiling, i18n, a11y, and developer onboarding."
         },
         {
           "title": "Integrations & AI",
@@ -360,6 +360,7 @@
           "Qt",
           "Stripe Integration",
           "AI Integration",
+          "Cypress",
           "Testing",
           "Observability"
         ]
@@ -368,7 +369,7 @@
     "projectSummaries": [
       {
         "title": "SplitWallet",
-        "description": "Expense-sharing platform with real-time sync, offline UX, and premium features backed by Stripe.",
+        "description": "Expense-sharing platform with real-time sync, offline UX, and premium features backed by Stripe. Extensive automated E2E tests in Cypress.",
         "link": "https://splitwallet.nexelon.sk/",
         "technologies": [
           "Next.js (App Router)",
@@ -377,13 +378,14 @@
           "Drizzle ORM",
           "Zustand",
           "React Query",
-          "Tailwind CSS"
+          "Tailwind CSS",
+          "Cypress"
         ],
         "impact": "Type-safe calculations and validations reduced settlement mistakes by ~30%; SSR/ISR keeps LCP and SEO fast."
       },
       {
         "title": "Tempora – Attendance & Leave",
-        "description": "B2B attendance system with check-ins/outs, vacation approvals, reporting, roles, and audit log.",
+        "description": "B2B attendance system with check-ins/outs, vacation approvals, reporting, roles, and audit log. Extensive automated E2E tests in Cypress.",
         "link": "http://tempora-demo.nexelon.sk/",
         "technologies": [
           "Next.js",
@@ -392,7 +394,8 @@
           "PostgreSQL",
           "tRPC",
           "NextAuth",
-          "Better Auth"
+          "Better Auth",
+          "Cypress"
         ],
         "impact": "Modular domains with server actions, optimistic updates, caching, and accounting exports."
       },

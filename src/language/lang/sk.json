@@ -66,7 +66,7 @@
         },
         {
           "title": "Kvalita & DX",
-          "description": "Testovanie, linting, code review, release management, profilovanie výkonu, i18n, a11y a onboarding vývojárov."
+          "description": "Testovanie (Cypress, automatizované E2E testy), linting, code review, release management, profilovanie výkonu, i18n, a11y a onboarding vývojárov."
         },
         {
           "title": "Integrácie & AI",
@@ -360,6 +360,7 @@
           "Qt",
           "Integrácia Stripe",
           "Integrácia AI",
+          "Cypress",
           "Testovanie",
           "Observability"
         ]
@@ -368,7 +369,7 @@
     "projectSummaries": [
       {
         "title": "SplitWallet",
-        "description": "Aplikácia na zdieľanie výdavkov s real-time synchronizáciou, offline UX a prémiovými funkciami so Stripe.",
+        "description": "Aplikácia na zdieľanie výdavkov s real-time synchronizáciou, offline UX a prémiovými funkciami so Stripe. Rozsiahle automatizované E2E testy v Cypress.",
         "link": "https://splitwallet.nexelon.sk/",
         "technologies": [
           "Next.js (App Router)",
@@ -377,13 +378,14 @@
           "Drizzle ORM",
           "Zustand",
           "React Query",
-          "Tailwind CSS"
+          "Tailwind CSS",
+          "Cypress"
         ],
         "impact": "Typovo bezpečné výpočty a validácie znížili chyby pri vyrovnávaní o ~30 %; SSR/ISR drží LCP aj SEO rýchle."
       },
       {
         "title": "Tempora – dochádzka & dovolenky",
-        "description": "B2B dochádzkový systém s príchodmi/odchodmi, schvaľovaním dovoleniek, reportmi, rolami a audit logom.",
+        "description": "B2B dochádzkový systém s príchodmi/odchodmi, schvaľovaním dovoleniek, reportmi, rolami a audit logom. Rozsiahle automatizované E2E testy v Cypress.",
         "link": "http://tempora-demo.nexelon.sk/",
         "technologies": [
           "Next.js",
@@ -392,7 +394,8 @@
           "PostgreSQL",
           "tRPC",
           "NextAuth",
-          "Better Auth"
+          "Better Auth",
+          "Cypress"
         ],
         "impact": "Modulárne domény so server actions, optimistickými update-mi, cachingom a exportmi pre účtovníctvo."
       },

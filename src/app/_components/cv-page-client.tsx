@@ -27,7 +27,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
   const projectSummaries = profileContent.projectSummaries ?? [];
   const cvSections = langObj.cvSections as CVSections | undefined;
   const statusItems = cvSections?.status?.items ?? [];
-  const profileParagraphs = cvSections?.profile?.paragraphs ?? [];
   const competencyItems = cvSections?.competencies?.items ?? [];
   const principleItems = cvSections?.principles?.items ?? [];
   const achievementItems = cvSections?.achievements?.items ?? [];
@@ -131,19 +130,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                 </div>
               ) : null}
 
-              {profileParagraphs.length ? (
-                <div>
-                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
-                    {langObj.cvSections?.profile?.title}
-                  </h2>
-                  <div className="text-muted-foreground mt-3 space-y-3 text-sm leading-relaxed print:text-black">
-                    {profileParagraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
                   {t(lang.about.title)}
@@ -154,6 +140,19 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                   <p>{t(lang.about.paragraph3)}</p>
                 </div>
               </div>
+
+              {achievementItems.length ? (
+                <section className="mt-6">
+                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
+                    {langObj.cvSections?.achievements?.title}
+                  </h2>
+                  <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
+                    {achievementItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
 
               <div>
                 <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
@@ -198,19 +197,6 @@ export function CVPageClient({ langObj }: CVPageClientProps) {
                   </h2>
                   <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
                     {principleItems.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-
-              {achievementItems.length ? (
-                <div>
-                  <h2 className="text-muted-foreground text-xl font-semibold tracking-wide uppercase print:text-black">
-                    {langObj.cvSections?.achievements?.title}
-                  </h2>
-                  <ul className="text-muted-foreground mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed print:text-black">
-                    {achievementItems.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
