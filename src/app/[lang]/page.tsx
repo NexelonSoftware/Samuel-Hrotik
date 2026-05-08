@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   BriefcaseIcon,
+  ChefHat,
   Download,
   Github,
   Linkedin,
@@ -74,8 +75,24 @@ export default async function Home({
             >
               {ts(langObj, langMaps.navbar.contact)}
             </SmoothScrollLink>
+            <Link
+              href={`/${lang}/recipes`}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {ts(langObj, langMaps.navbar.recipes)}
+            </Link>
           </nav>
           <div className="flex items-center justify-center gap-4">
+            <Link
+              href={`/${lang}/recipes`}
+              className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm transition-colors md:hidden"
+              aria-label={ts(langObj, langMaps.navbar.recipes)}
+            >
+              <ChefHat className="h-5 w-5" />
+              <span className="sr-only">
+                {ts(langObj, langMaps.navbar.recipes)}
+              </span>
+            </Link>
             <LocaleSwitcherNavbar />
             <ThemeToggle />
             <Link

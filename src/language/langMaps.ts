@@ -6,7 +6,8 @@ export const langMaps = {
     "about": "navbar.about",
     "skills": "navbar.skills",
     "projects": "navbar.projects",
-    "contact": "navbar.contact"
+    "contact": "navbar.contact",
+    "recipes": "navbar.recipes"
   },
   "buttons": {
     "viewMyWork": "buttons.viewMyWork",
@@ -456,6 +457,72 @@ export const langMaps = {
         },
         "impact": "profile.projectSummaries.4.impact"
       }
+    }
+  },
+  "recipes": {
+    "title": "recipes.title",
+    "description": "recipes.description",
+    "count": "recipes.count",
+    "searchLabel": "recipes.searchLabel",
+    "searchPlaceholder": "recipes.searchPlaceholder",
+    "noResults": "recipes.noResults",
+    "toggleColumns": "recipes.toggleColumns",
+    "backToList": "recipes.backToList",
+    "openRecipe": "recipes.openRecipe",
+    "viewSource": "recipes.viewSource",
+    "filters": {
+      "all": "recipes.filters.all",
+      "category": "recipes.filters.category",
+      "difficulty": "recipes.filters.difficulty",
+      "cuisine": "recipes.filters.cuisine",
+      "clearAll": "recipes.filters.clearAll"
+    },
+    "columns": {
+      "image": "recipes.columns.image",
+      "name": "recipes.columns.name",
+      "category": "recipes.columns.category",
+      "cuisine": "recipes.columns.cuisine",
+      "time": "recipes.columns.time",
+      "difficulty": "recipes.columns.difficulty",
+      "tags": "recipes.columns.tags",
+      "servings": "recipes.columns.servings"
+    },
+    "categories": {
+      "main": "recipes.categories.main",
+      "side": "recipes.categories.side",
+      "sauce": "recipes.categories.sauce",
+      "dessert": "recipes.categories.dessert",
+      "soup": "recipes.categories.soup",
+      "salad": "recipes.categories.salad",
+      "dough": "recipes.categories.dough"
+    },
+    "difficulties": {
+      "easy": "recipes.difficulties.easy",
+      "medium": "recipes.difficulties.medium",
+      "hard": "recipes.difficulties.hard",
+      "unknown": "recipes.difficulties.unknown"
+    },
+    "detail": {
+      "description": "recipes.detail.description",
+      "ingredients": "recipes.detail.ingredients",
+      "steps": "recipes.detail.steps",
+      "equipment": "recipes.detail.equipment",
+      "notes": "recipes.detail.notes",
+      "source": "recipes.detail.source",
+      "references": "recipes.detail.references",
+      "tags": "recipes.detail.tags",
+      "servings": "recipes.detail.servings",
+      "prepTime": "recipes.detail.prepTime",
+      "cookTime": "recipes.detail.cookTime",
+      "totalTime": "recipes.detail.totalTime",
+      "ovenTemperature": "recipes.detail.ovenTemperature",
+      "difficulty": "recipes.detail.difficulty",
+      "category": "recipes.detail.category",
+      "cuisine": "recipes.detail.cuisine",
+      "owner": "recipes.detail.owner",
+      "noImage": "recipes.detail.noImage",
+      "ingredientsEmpty": "recipes.detail.ingredientsEmpty",
+      "stepsEmpty": "recipes.detail.stepsEmpty"
     }
   }
 } as const;
