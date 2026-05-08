@@ -471,7 +471,8 @@
       "dessert": "Dessert",
       "soup": "Soup",
       "salad": "Salad",
-      "dough": "Dough"
+      "dough": "Dough",
+      "drinky": "Drinks"
     },
     "difficulties": {
       "easy": "Easy",
@@ -482,13 +483,16 @@
     "detail": {
       "description": "Description",
       "ingredients": "Ingredients",
+      "portions": "Portions",
       "steps": "Steps",
       "equipment": "Equipment",
+      "relatedRecipesTitle": "Related recipes",
       "notes": "Notes",
       "source": "Source",
       "references": "References",
       "tags": "Tags",
       "servings": "Servings",
+      "reset": "Reset",
       "prepTime": "Prep time",
       "cookTime": "Cook time",
       "totalTime": "Total time",

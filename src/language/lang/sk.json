@@ -471,7 +471,8 @@
       "dessert": "Dezert",
       "soup": "Polievka",
       "salad": "Šalát",
-      "dough": "Cesto"
+      "dough": "Cesto",
+      "drinky": "Drinky"
     },
     "difficulties": {
       "easy": "Ľahké",
@@ -482,13 +483,16 @@
     "detail": {
       "description": "Popis",
       "ingredients": "Ingrediencie",
+      "portions": "Porcie",
       "steps": "Postup",
       "equipment": "Vybavenie",
+      "relatedRecipesTitle": "Súvisiace recepty",
       "notes": "Poznámky",
       "source": "Zdroj",
       "references": "Odkazy",
       "tags": "Štítky",
       "servings": "Porcie",
+      "reset": "Resetovať",
       "prepTime": "Príprava",
       "cookTime": "Varenie",
       "totalTime": "Celkový čas",

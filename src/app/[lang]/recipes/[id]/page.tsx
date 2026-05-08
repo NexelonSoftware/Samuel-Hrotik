@@ -16,6 +16,7 @@ import {
 
 import LocaleSwitcherNavbar from "../../../_components/LocaleSwitcherNavbar";
 import { ThemeToggle } from "../../../_components/theme-toggle";
+import { IngredientsWithPortions } from "./_components/IngredientsWithPortions";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import type { Locale } from "~/language/i18n.config";
@@ -43,6 +44,11 @@ export default async function RecipeDetailPage({
   if (!recipe) notFound();
 
   const langObj = await getLanguage(lang);
+
+  const relatedRecipes = (recipe.relatedRecipes ?? [])
+    .filter((relatedId) => relatedId !== recipe.id)
+    .map((relatedId) => getRecipeById(relatedId))
+    .filter((r): r is NonNullable<typeof r> => Boolean(r));
 
   const categoryLabel = ts(langObj, langMaps.recipes.categories[recipe.category]);
   const difficultyLabel = recipe.difficulty
@@ -211,34 +217,49 @@ export default async function RecipeDetailPage({
                 {ts(langObj, langMaps.recipes.detail.ingredientsEmpty)}
               </p>
             ) : (
-              <ul className="divide-y">
-                {recipe.ingredients.map((ing, idx) => {
-                  const qty =
-                    ing.quantity !== null ? String(ing.quantity) : "";
-                  const unit = ing.unit ?? "";
-                  const amount = [qty, unit].filter(Boolean).join(" ");
-                  return (
-                    <li
-                      key={`${ing.name}-${idx}`}
-                      className="flex items-start justify-between gap-3 py-2.5"
-                    >
-                      <div className="flex flex-col">
-                        <span className="text-sm font-medium">{ing.name}</span>
-                        {ing.notes ? (
-                          <span className="text-muted-foreground text-xs">
-                            {ing.notes}
-                          </span>
-                        ) : null}
-                      </div>
-                      {amount ? (
-                        <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
-                          {amount}
-                        </span>
-                      ) : null}
-                    </li>
-                  );
-                })}
-              </ul>
+              <>
+                {recipe.servings !== null ? (
+                  <IngredientsWithPortions
+                    baseServings={recipe.servings}
+                    ingredients={recipe.ingredients}
+                    labels={{
+                      portions: ts(langObj, langMaps.recipes.detail.portions),
+                      reset: ts(langObj, langMaps.recipes.detail.reset),
+                    }}
+                  />
+                ) : (
+                  <ul className="divide-y">
+                    {recipe.ingredients.map((ing, idx) => {
+                      const qty =
+                        ing.quantity !== null ? String(ing.quantity) : "";
+                      const unit = ing.unit ?? "";
+                      const amount = [qty, unit].filter(Boolean).join(" ");
+                      return (
+                        <li
+                          key={`${ing.name}-${idx}`}
+                          className="flex items-start justify-between gap-3 py-2.5"
+                        >
+                          <div className="flex flex-col">
+                            <span className="text-sm font-medium">
+                              {ing.name}
+                            </span>
+                            {ing.notes ? (
+                              <span className="text-muted-foreground text-xs">
+                                {ing.notes}
+                              </span>
+                            ) : null}
+                          </div>
+                          {amount ? (
+                            <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
+                              {amount}
+                            </span>
+                          ) : null}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </>
             )}
 
             {recipe.equipment.length > 0 ? (
@@ -285,6 +306,51 @@ export default async function RecipeDetailPage({
             )}
           </section>
         </div>
+
+        {relatedRecipes.length > 0 ? (
+          <section className="bg-card flex flex-col gap-3 rounded-2xl border p-4 sm:p-5">
+            <h3 className="text-lg font-semibold">
+              {ts(langObj, langMaps.recipes.detail.relatedRecipesTitle)}
+            </h3>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedRecipes.map((r) => (
+                <Link
+                  key={r.id}
+                  href={`/${lang}/recipes/${r.id}`}
+                  className="hover:bg-accent/40 focus-visible:ring-ring group flex flex-col gap-1.5 rounded-xl border p-3 transition-colors focus-visible:outline-none focus-visible:ring-2"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex flex-col gap-1">
+                      <span className="line-clamp-2 text-sm font-semibold">
+                        {r.name}
+                      </span>
+                      {r.description ? (
+                        <span className="text-muted-foreground line-clamp-2 text-xs">
+                          {r.description}
+                        </span>
+                      ) : null}
+                    </div>
+                    <ArrowLeft className="text-muted-foreground/70 h-4 w-4 rotate-180 transition-transform group-hover:translate-x-0.5" />
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                    <Badge variant="secondary" className="text-[11px]">
+                      {ts(langObj, langMaps.recipes.categories[r.category])}
+                    </Badge>
+                    {r.difficulty ? (
+                      <span className="bg-muted inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px]">
+                        <span
+                          aria-hidden
+                          className={`h-2 w-2 rounded-full ${getDifficultyColor(r.difficulty)}`}
+                        />
+                        {ts(langObj, langMaps.recipes.difficulties[r.difficulty])}
+                      </span>
+                    ) : null}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {(Boolean(recipe.notes) ||
           Boolean(recipe.sourceUrl) ||

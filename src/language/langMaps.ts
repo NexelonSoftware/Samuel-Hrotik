@@ -494,7 +494,8 @@ export const langMaps = {
       "dessert": "recipes.categories.dessert",
       "soup": "recipes.categories.soup",
       "salad": "recipes.categories.salad",
-      "dough": "recipes.categories.dough"
+      "dough": "recipes.categories.dough",
+      "drinky": "recipes.categories.drinky"
     },
     "difficulties": {
       "easy": "recipes.difficulties.easy",
@@ -505,13 +506,16 @@ export const langMaps = {
     "detail": {
       "description": "recipes.detail.description",
       "ingredients": "recipes.detail.ingredients",
+      "portions": "recipes.detail.portions",
       "steps": "recipes.detail.steps",
       "equipment": "recipes.detail.equipment",
+      "relatedRecipesTitle": "recipes.detail.relatedRecipesTitle",
       "notes": "recipes.detail.notes",
       "source": "recipes.detail.source",
       "references": "recipes.detail.references",
       "tags": "recipes.detail.tags",
       "servings": "recipes.detail.servings",
+      "reset": "recipes.detail.reset",
       "prepTime": "recipes.detail.prepTime",
       "cookTime": "recipes.detail.cookTime",
       "totalTime": "recipes.detail.totalTime",

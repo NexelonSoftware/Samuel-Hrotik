@@ -7,7 +7,8 @@ export type RecipeCategory =
   | "dessert"
   | "soup"
   | "salad"
-  | "dough";
+  | "dough"
+  | "drinky";
 
 export type RecipeDifficulty = "easy" | "medium" | "hard";
 
@@ -25,6 +26,7 @@ export interface Recipe {
   description: string;
   category: RecipeCategory;
   tags: string[];
+  relatedRecipes: string[];
   cuisine: string;
   servings: number | null;
   prepTimeMinutes: number | null;
@@ -49,6 +51,7 @@ export const RECIPE_CATEGORIES: RecipeCategory[] = [
   "soup",
   "salad",
   "dough",
+  "drinky",
 ];
 
 export const RECIPE_DIFFICULTIES: RecipeDifficulty[] = [
